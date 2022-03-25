@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 
 import Header from '../components/Header'
+import Logos from '../components/Logos'
 
 const Home: NextPage = () => {
   return (
@@ -15,6 +16,8 @@ const Home: NextPage = () => {
       <main className="">
         <Header />
       </main>
+      <h1>Some cool tech that I've used:</h1>
+      <Logos />
       <h1>Dupa asta</h1>
       <h1>Si inca unul</h1>
 
