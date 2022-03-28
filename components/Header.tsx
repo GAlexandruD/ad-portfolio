@@ -4,16 +4,14 @@ import { SiGithub, SiLinkedin } from 'react-icons/si'
 const Header = () => {
   return (
     <div className="relative flex h-screen content-center justify-center">
-      <div>
-        <Image
-          src="/static/Liliac_empty.png"
-          alt="Main picture"
-          layout="fill"
-          objectFit="cover"
-        />
-      </div>
+      <Image
+        src="/static/krivec-2.jpg"
+        alt="Main picture"
+        layout="fill"
+        objectFit="cover"
+      />
 
-      <div className="relative self-center text-center text-2xl text-white">
+      <div className="relative self-center text-center text-3xl text-white">
         <h1>Hi, I am Alexandru Dragos</h1>
         <h1>React Developer</h1>
         <div className="flex justify-center p-1">
