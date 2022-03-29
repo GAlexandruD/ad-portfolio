@@ -7,9 +7,6 @@
   },
   "dependencies": {
     "@animxyz/react": "^0.6.6",
-    "@fortawesome/free-brands-svg-icons": "^6.1.1",
-    "@fortawesome/free-solid-svg-icons": "^6.1.1",
-    "@fortawesome/react-fontawesome": "^0.1.18",
     "flubber": "^0.4.2",
     "framer-motion": "^6.2.8",
     "next": "latest",

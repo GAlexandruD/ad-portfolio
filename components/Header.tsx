@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { SiGithub, SiLinkedin } from 'react-icons/si'
+import { RiArrowDownSLine } from 'react-icons/ri'
 import { WindupChildren, Pace } from 'windups'
 
 const Header = () => {
@@ -12,7 +13,7 @@ const Header = () => {
         objectFit="cover"
       />
 
-      <div className="relative mb-11 self-center text-center text-3xl text-white">
+      <div className="absolute mb-11 self-center text-center text-3xl text-white">
         <WindupChildren>
           <Pace ms={50}>
             <h1 className="mb-10">Hi, I am Alexandru Dragos</h1>
@@ -21,15 +22,28 @@ const Header = () => {
 
           <div className="flex justify-center p-1">
             <Pace ms={400}>
-              <div className="p-2 hover:cursor-pointer">
+              <a
+                href="https://github.com/GAlexandruD"
+                target="_blank"
+                className="p-2"
+              >
                 <SiGithub />
-              </div>
+              </a>
               <div className="p-2 hover:cursor-pointer">
                 <SiLinkedin />
               </div>
             </Pace>
           </div>
         </WindupChildren>
+      </div>
+
+      <div
+        id="scroll-down"
+        className="absolute bottom-20 animate-pulse text-5xl text-white sm:text-7xl md:text-9xl"
+      >
+        <a className="scroll-smooth" title="Scroll down" href="#tech">
+          <RiArrowDownSLine className="font-bold" />
+        </a>
       </div>
     </div>
   )
