@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { SiGithub, SiLinkedin } from 'react-icons/si'
+import TypeWritter from './TypeWritter'
 
 const Header = () => {
   return (
@@ -13,7 +14,11 @@ const Header = () => {
 
       <div className="relative self-center text-center text-3xl text-white">
         <h1>Hi, I am Alexandru Dragos</h1>
-        <h1>React Developer</h1>
+        <h1>
+          <TypeWritter />
+          Developer
+        </h1>
+
         <div className="flex justify-center p-1">
           <div className="p-2">
             <SiGithub />
