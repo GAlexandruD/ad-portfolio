@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { SiGithub, SiLinkedin } from 'react-icons/si'
-import TypeWritter from './TypeWritter'
+import { WindupChildren, Pace } from 'windups'
 
 const Header = () => {
   return (
@@ -12,21 +12,24 @@ const Header = () => {
         objectFit="cover"
       />
 
-      <div className="relative self-center text-center text-3xl text-white">
-        <h1>Hi, I am Alexandru Dragos</h1>
-        <h1>
-          <TypeWritter />
-          Developer
-        </h1>
+      <div className="relative mb-11 self-center text-center text-3xl text-white">
+        <WindupChildren>
+          <Pace ms={50}>
+            <h1 className="mb-10">Hi, I am Alexandru Dragos</h1>
+            <h1 className="pb-10">React Developer</h1>
+          </Pace>
 
-        <div className="flex justify-center p-1">
-          <div className="p-2">
-            <SiGithub />
+          <div className="flex justify-center p-1">
+            <Pace ms={400}>
+              <div className="p-2 hover:cursor-pointer">
+                <SiGithub />
+              </div>
+              <div className="p-2 hover:cursor-pointer">
+                <SiLinkedin />
+              </div>
+            </Pace>
           </div>
-          <div className="p-2">
-            <SiLinkedin />
-          </div>
-        </div>
+        </WindupChildren>
       </div>
     </div>
   )
