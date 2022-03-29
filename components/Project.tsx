@@ -6,20 +6,22 @@ import { WindupChildren, Pace } from 'windups'
 const Project = () => {
   return (
     <>
-      <div className="relative h-full w-screen bg-slate-400">
+      <div className="relative grid content-center justify-center bg-slate-600 p-4">
         <Image
           src="/static/projects/ad-portfolio.png"
           alt="Project picture"
-          layout="fill"
+          width={1000}
+          height={1000}
           objectFit="cover"
         />
       </div>
 
-      <div className="relative h-full w-screen bg-slate-400">
+      <div className="relative grid content-center justify-center bg-slate-600 p-4">
         <Image
           src="/static/projects/ad-portfolio.png"
           alt="Project picture"
-          layout="fill"
+          width={1000}
+          height={1000}
           objectFit="cover"
         />
       </div>

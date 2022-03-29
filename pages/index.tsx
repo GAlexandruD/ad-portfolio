@@ -25,11 +25,16 @@ const Home: NextPage = () => {
       >
         Some cool tech that I've used:
       </h1>
-      <div className="relative w-screen">
-        <Logos />
-      </div>
 
-      <div id="projects" className="grid h-96 w-96 bg-slate-500">
+      <Logos />
+
+      <h1 className="bg-slate-600 p-10 text-center text-3xl text-gray-300">
+        My projects
+      </h1>
+      <div
+        id="projects"
+        className="grid grid-cols-1 content-center justify-center bg-slate-600 p-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+      >
         <Project />
       </div>
 

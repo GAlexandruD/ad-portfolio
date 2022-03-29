@@ -25,7 +25,7 @@ const Logos = () => {
   ]
 
   return (
-    <div className="flex flex-wrap content-center justify-center bg-slate-700">
+    <div className="flex flex-wrap justify-center bg-slate-700 pl-2 pb-20">
       {logoPaths.map((item, index) => {
         return <Logo path={item.path} name={item.name} key={index} />
       })}
