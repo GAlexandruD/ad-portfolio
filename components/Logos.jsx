@@ -25,11 +25,19 @@ const Logos = () => {
   ]
 
   return (
-    <div className="flex flex-wrap justify-center bg-slate-700 pl-2 pb-20">
-      {logoPaths.map((item, index) => {
-        return <Logo path={item.path} name={item.name} key={index} />
-      })}
-    </div>
+    <>
+      <h1
+        id="tech"
+        className="bg-slate-700 pt-20 pb-20 text-center text-3xl text-gray-300"
+      >
+        Some cool tech that I've used:
+      </h1>
+      <div className="flex flex-wrap justify-center bg-slate-700 pl-2 pb-20">
+        {logoPaths.map((item, index) => {
+          return <Logo path={item.path} name={item.name} key={index} />
+        })}
+      </div>
+    </>
   )
 }
 
