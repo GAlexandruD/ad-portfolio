@@ -1,3 +1,5 @@
+import React, { useState } from 'react'
+
 type Props = {}
 
 const Contact = (props: Props) => {

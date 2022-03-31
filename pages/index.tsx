@@ -7,6 +7,7 @@ import Footer from '../components/Footer'
 
 import Header from '../components/Header'
 import Logos from '../components/Logos'
+import Navbar from '../components/Navbar'
 import Project from '../components/Project'
 import Projects from '../components/Projects'
 import ProjectTest from '../components/ProjectTest'
@@ -20,6 +21,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main id="home">
+        <Navbar />
         <Header />
       </main>
 

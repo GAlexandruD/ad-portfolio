@@ -19,13 +19,13 @@ const Projects = (props: Props) => {
   ]
   return (
     <>
-      <h1 className="bg-slate-600 p-10 text-center text-3xl text-gray-300">
+      <h1
+        id="projects"
+        className="bg-slate-600 p-14 text-center text-3xl text-gray-300"
+      >
         My projects
       </h1>
-      <div
-        id="projects"
-        className="grid grid-cols-1 content-center justify-center bg-slate-600 p-4 pb-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
-      >
+      <div className="grid grid-cols-1 content-center justify-center bg-slate-600 p-4 pb-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {projects.map((project, index) => (
           <Project
             key={index}
