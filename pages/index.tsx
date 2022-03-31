@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import Contact from '../components/Contact'
 import { Example } from '../components/Example'
 import Footer from '../components/Footer'
 
@@ -24,6 +25,7 @@ const Home: NextPage = () => {
 
       <Logos />
       <Projects />
+      <Contact />
       <Footer />
     </div>
   )
