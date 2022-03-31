@@ -3,6 +3,24 @@ import React, { useState } from 'react'
 type Props = {}
 
 const Contact = (props: Props) => {
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [subject, setSubject] = useState('')
+  const [message, setMessage] = useState('')
+  const contactEmail = 'AlexandruD@gmail.com'
+
+  const submitForm = () => {
+    const date = new Date().toDateString()
+    setSubject(date)
+    window.open(
+      `mailto:${contactEmail}?subject=${encodeURIComponent(
+        subject
+      )}&body=${encodeURIComponent(name)} (${encodeURIComponent(
+        email
+      )}): ${encodeURIComponent(message)}`
+    )
+  }
+
   return (
     <section
       id="contact"
@@ -23,7 +41,7 @@ const Contact = (props: Props) => {
               <div className="relative">
                 <label
                   htmlFor="name"
-                  className="text-sm leading-7 text-gray-200"
+                  className=" text-sm leading-7 text-gray-200 required:bg-pink-400"
                 >
                   Name
                 </label>
@@ -31,6 +49,8 @@ const Contact = (props: Props) => {
                   type="text"
                   id="name"
                   name="name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                   className="w-full rounded border border-gray-300 bg-gray-100 bg-opacity-90 py-1 px-3 text-base leading-8 text-gray-700 outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200"
                 />
               </div>
@@ -47,6 +67,8 @@ const Contact = (props: Props) => {
                   type="email"
                   id="email"
                   name="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   className="w-full rounded border border-gray-300 bg-gray-100 bg-opacity-90 py-1 px-3 text-base leading-8 text-gray-700 outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200"
                 />
               </div>
@@ -62,12 +84,18 @@ const Contact = (props: Props) => {
                 <textarea
                   id="message"
                   name="message"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                   className="h-32 w-full resize-none rounded border border-gray-300 bg-gray-100 bg-opacity-90 py-1 px-3 text-base leading-6 text-gray-700 outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200"
                 ></textarea>
               </div>
             </div>
             <div className="w-full p-2">
-              <button className="mx-auto flex rounded border-0 bg-gray-200 py-2 px-8 text-lg text-slate-700 hover:bg-gray-300 focus:outline-none">
+              <button
+                onClick={submitForm}
+                type="submit"
+                className="mx-auto flex rounded border-0 bg-gray-200 py-2 px-8 text-lg text-slate-700 hover:bg-gray-300 focus:outline-none"
+              >
                 Send
               </button>
             </div>
@@ -97,7 +125,7 @@ const Contact = (props: Props) => {
                     stroke="currentColor"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeWidth="2"
                     className="h-5 w-5"
                     viewBox="0 0 24 24"
                   >
@@ -117,7 +145,7 @@ const Contact = (props: Props) => {
                     fill="currentColor"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeWidth="2"
                     className="h-5 w-5"
                     viewBox="0 0 24 24"
                   >
