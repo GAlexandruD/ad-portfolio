@@ -7,13 +7,13 @@ const Projects = (props: Props) => {
     {
       github: 'https://github.com/GAlexandruD/react-3d-earth',
       name: 'react-3d-earth',
-      website: '#',
+      website: 'https://react-3d-earth-indol.vercel.app/',
       image: '/static/projects/react-3d-earth.png',
     },
     {
       github: 'https://github.com/GAlexandruD/airbnb-clone',
       name: 'airbnb-clone',
-      website: 'http://airbnb-clone-green-six.vercel.app/',
+      website: 'https://airbnb-clone-green-six.vercel.app/',
       image: '/static/projects/airbnb-clone.png',
     },
   ]
