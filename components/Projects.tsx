@@ -16,6 +16,20 @@ const Projects = (props: Props) => {
       website: 'https://airbnb-clone-green-six.vercel.app/',
       image: '/static/projects/airbnb-clone.png',
     },
+
+    {
+      github: 'https://github.com/GAlexandruD/ad-portfolio',
+      name: 'ad-portfolio',
+      website: 'https://ad-portfolio.vercel.app/',
+      image: '/static/projects/ad-portfolio.png',
+    },
+
+    {
+      github: 'https://github.com/GAlexandruD/facerecognition',
+      name: 'facerecognition',
+      website: 'https://face-recognition-frt.herokuapp.com/',
+      image: '/static/projects/facerecognition.png',
+    },
   ]
   return (
     <>
