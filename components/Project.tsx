@@ -15,7 +15,7 @@ type Props = {
 const Project = (props: Props) => {
   return (
     <>
-      <div className=" relative m-2 rounded-xl bg-slate-700/50 pt-12 pb-12 shadow-xl shadow-slate-500">
+      <div className="relative m-2 rounded-xl bg-slate-700/50 pt-12 pb-12 shadow-xl shadow-slate-500 sm:transition-all sm:duration-300 sm:hover:scale-105">
         <Image
           src={`${props.image}`}
           alt="Project picture"
@@ -23,7 +23,7 @@ const Project = (props: Props) => {
           height={1000}
           objectFit="cover"
         />
-        <h1 className="absolute top-0 left-0 right-0 rounded-xl  pt-2 text-center text-2xl text-gray-200">
+        <h1 className="absolute top-0 left-0 right-0 rounded-xl  pt-3 text-center text-xl text-gray-200">
           {props.name}
         </h1>
 
