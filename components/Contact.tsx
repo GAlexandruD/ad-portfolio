@@ -102,9 +102,8 @@ const Contact = (props: Props) => {
             <div className="mt-8 w-full border-t border-gray-200 p-2 pt-8 text-center">
               <a className="text-gray-200">Thank you for your visit!</a>
               <p className="my-5 leading-normal">
-                This page was made with NextJS in
-                <br />
-                Bucharest, Romania
+                This page was made with NextJS
+                <br />I am from Bucharest, Romania
               </p>
               <span className="inline-flex">
                 <a className="ml-4 text-gray-500">

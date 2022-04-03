@@ -5,6 +5,12 @@ type Props = {}
 const Projects = (props: Props) => {
   const projects = [
     {
+      github: 'https://github.com/GAlexandruD/nft-challenge',
+      name: 'nft-challenge',
+      website: 'https://nft-challenge-six.vercel.app/',
+      image: '/static/projects/PAPAFAM_NFT_MARKET_Place.png',
+    },
+    {
       github: 'https://github.com/GAlexandruD/react-3d-earth',
       name: 'react-3d-earth',
       website: 'https://react-3d-earth-indol.vercel.app/',
