@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es2017",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -20,7 +20,9 @@
     "**/*.ts",
     "**/*.tsx",
     "components/Example.jsx",
-    "components/TypeWritter.jsx"
+    "components/TypeWritter.jsx",
+    "pages/api/github.js",
+    "pages/api/github.js"
   ],
   "exclude": ["node_modules"]
 }

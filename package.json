@@ -7,9 +7,11 @@
   },
   "dependencies": {
     "@animxyz/react": "^0.6.6",
+    "@octokit/request": "^5.6.3",
     "flubber": "^0.4.2",
     "framer-motion": "^6.2.8",
     "next": "latest",
+    "octokit": "^1.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
