@@ -9,6 +9,16 @@ const octokit = new Octokit({
   auth: process.env.GITHUB_TOKEN,
 })
 
+octokit
+  .request('GET /repos/{owner}/{repo}/commits', {
+    owner: 'GAlexandruD',
+    repo: 'ad-portfolio',
+    per_page: 100,
+  })
+  .then((res) => {
+    console.log('oktokit', res.data)
+  })
+
 const github = async (req, res) => {
   const result = await request('GET /repos/{owner}/{repo}/commits', {
     headers: {
