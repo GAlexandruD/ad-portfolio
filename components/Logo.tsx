@@ -5,8 +5,8 @@ type Props = { path: string; name: string }
 
 const Logo = (props: Props) => {
   return (
-    <div className="mb-10 mr-4">
-      <div className="relative mb-2 h-24 w-24">
+    <div className="mr-4 flex flex-col items-center justify-center p-4">
+      <div className="relative mb-2 h-24 w-24 transition delay-150 duration-150 ease-in-out sm:hover:scale-110">
         <Image
           src={props.path}
           alt={`${props.name} Logo`}
@@ -14,7 +14,9 @@ const Logo = (props: Props) => {
           objectFit="scale-down"
         />
       </div>
-      <p className="text-center text-xl text-gray-300">{props.name}</p>
+      <p className="cursor-default text-center text-xl hover:text-[#545721] dark:hover:text-yellow-100">
+        {props.name}
+      </p>
     </div>
   )
 }

@@ -28,11 +28,11 @@ const Logos = () => {
     <>
       <h1
         id="tech"
-        className="bg-slate-700 pt-20 pb-20 text-center text-3xl text-gray-300"
+        className="border-t-2 border-[#a08540] pt-20 pb-20 text-center text-3xl dark:border-[#a08540]"
       >
         Some cool tech that I've used:
       </h1>
-      <div className="flex flex-wrap justify-center bg-slate-700 pl-2 pb-20">
+      <div className="flex flex-wrap items-center justify-center px-2 indent-3">
         {logoPaths.map((item, index) => {
           return <Logo path={item.path} name={item.name} key={index} />
         })}

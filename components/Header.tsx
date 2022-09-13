@@ -11,9 +11,10 @@ const Header = () => {
         alt="Main picture"
         layout="fill"
         objectFit="cover"
+        className="dark:brightness-75"
       />
 
-      <div className="absolute mb-11 self-center text-center text-3xl text-white">
+      <div className="absolute mb-11 self-center text-center text-3xl text-white dark:text-[#dbd3c6]">
         <WindupChildren>
           <Pace ms={50}>
             <h1 className="mb-10">Hi, I am Alexandru Dragos</h1>
@@ -39,7 +40,7 @@ const Header = () => {
 
       <div
         id="scroll-down"
-        className="absolute bottom-20 animate-pulse text-5xl text-white sm:text-7xl md:text-9xl"
+        className="absolute bottom-20 animate-pulse text-5xl text-white dark:text-[#dbd3c6] sm:text-7xl md:text-9xl"
       >
         <a className="scroll-smooth" title="Scroll down" href="#tech">
           <RiArrowDownSLine className="font-bold" />
