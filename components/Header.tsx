@@ -11,10 +11,10 @@ const Header = () => {
         alt="Main picture"
         layout="fill"
         objectFit="cover"
-        className="dark:brightness-75"
+        className="dark:brightness-90"
       />
 
-      <div className="absolute mb-11 self-center text-center text-3xl text-white dark:text-[#dbd3c6]">
+      <div className="absolute mb-11 self-center text-center text-3xl text-white">
         <WindupChildren>
           <Pace ms={50}>
             <h1 className="mb-10">Hi, I am Alexandru Dragos</h1>
