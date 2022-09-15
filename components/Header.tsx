@@ -2,8 +2,15 @@ import Image from 'next/image'
 import { SiGithub, SiLinkedin } from 'react-icons/si'
 import { RiArrowDownSLine } from 'react-icons/ri'
 import { WindupChildren, Pace } from 'windups'
+import { useEffect, useState } from 'react'
 
 const Header = () => {
+  const [shadow, setShadow] = useState({
+    first: false,
+    second: false,
+    third: false,
+  })
+
   return (
     <div className="relative flex h-screen content-center justify-center">
       <Image
@@ -15,27 +22,46 @@ const Header = () => {
       />
 
       <div className="absolute mb-11 self-center text-center text-3xl text-white">
-        <WindupChildren>
-          <Pace ms={50}>
-            <h1 className="mb-10">Hi, I am Alexandru Dragos</h1>
-            <h1 className="pb-10">React Developer</h1>
-          </Pace>
-
-          <div className="flex justify-center p-1">
-            <Pace ms={400}>
-              <a
-                href="https://github.com/GAlexandruD"
-                target="_blank"
-                className="p-2"
-              >
-                <SiGithub />
-              </a>
-              <div className="p-2 hover:cursor-pointer">
-                <SiLinkedin />
-              </div>
+        <div className="w-screen">
+          <WindupChildren
+            onFinished={() => setShadow({ ...shadow, first: true })}
+          >
+            <Pace ms={50}>
+              <h1 className="relative z-10 mb-10 w-full">
+                Hi, I am Alexandru Dragos
+              </h1>
             </Pace>
-          </div>
-        </WindupChildren>
+          </WindupChildren>
+          <span
+            className={`${
+              shadow.first
+                ? 'absolute -left-[2px] -top-[2px] mb-10 w-full text-black/70'
+                : 'hidden'
+            } transition-all delay-150 duration-1000`}
+          >
+            Hi, I am Alexandru Dragos
+          </span>
+        </div>
+        <h1 className="pb-10">React Developer</h1>
+
+        <div className="flex justify-center p-1">
+          <Pace ms={400}>
+            <a
+              href="https://github.com/GAlexandruD"
+              target="_blank"
+              className="p-2"
+            >
+              <SiGithub />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/dragos-ghiugan-96492938/"
+              target="_blank"
+              className="p-2"
+            >
+              <SiLinkedin />
+            </a>
+          </Pace>
+        </div>
       </div>
 
       <div

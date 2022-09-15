@@ -47,9 +47,9 @@ const github = async (req, res) => {
     aha: 'ahaaaaaa',
   })
   // console.log(repos.data[0])
-  console.log(readme.data.content)
+  // console.log(readme.data.content)
 
-  console.log(text)
+  // console.log(text)
 }
 
 export default github

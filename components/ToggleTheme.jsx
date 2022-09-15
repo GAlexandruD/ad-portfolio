@@ -13,7 +13,7 @@ const ToggleTheme = () => {
   }, [])
 
   if (!mounted) return null
-  console.log('I fired! Theme is:', window.localStorage.theme)
+
   return (
     <button
       onClick={(e) => {

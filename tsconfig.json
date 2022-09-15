@@ -23,7 +23,8 @@
     "components/TypeWritter.jsx",
     "pages/api/github.js",
     "pages/api/github.js",
-    "components/Projects.jsx"
+    "components/Projects.jsx",
+    "pages/index.jsx"
   ],
   "exclude": ["node_modules"]
 }
