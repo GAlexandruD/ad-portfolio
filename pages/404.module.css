@@ -1,0 +1,19 @@
+.exterior {
+  margin: 0;
+  padding: 0;
+  background: url('/static/white-noise.jpg');
+  width: 100vw;
+  height: 100vh;
+  animation: animate 0.5s infinite linear alternate-reverse;
+  background-repeat: repeat;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 1000% 1000%;
+  }
+}

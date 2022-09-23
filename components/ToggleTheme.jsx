@@ -22,7 +22,11 @@ const ToggleTheme = () => {
       }}
       className="m-2 cursor-pointer text-lg "
     >
-      {theme === 'dark' ? <FaMoon /> : <FaSun />}
+      {theme === 'dark' ? (
+        <FaMoon className="h-6 w-6" />
+      ) : (
+        <FaSun className="h-6 w-6" />
+      )}
     </button>
   )
 }

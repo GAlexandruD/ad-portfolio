@@ -8,14 +8,14 @@
   "dependencies": {
     "@animxyz/react": "^0.6.6",
     "@octokit/request": "^5.6.3",
-    "flubber": "^0.4.2",
-    "framer-motion": "^6.2.8",
+    "framer-motion": "^7.3.6",
     "next": "12",
     "next-themes": "^0.2.1",
     "octokit": "^1.7.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
+    "react-simple-typewriter": "^4.0.2",
     "windups": "^1.1.9"
   },
   "devDependencies": {

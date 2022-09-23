@@ -7,10 +7,13 @@ import Footer from '../components/Footer'
 
 import { getAllProjects, github, projectsToShow } from '../lib/githubApi'
 import Header from '../components/Header'
-import Logos from '../components/Logos'
+import Skills from '../components/Skills'
 import Navbar from '../components/Navbar'
 import Projects from '../components/Projects'
 import { useEffect, useState } from 'react'
+import Hero from '../components/Hero'
+import Glitch from '../components/Glitch'
+import About from '../components/About'
 
 // This function gets called at build time on server-side.
 // It may be called again, on a serverless function, if
@@ -46,20 +49,35 @@ const Home = ({ projects }) => {
   }, [])
 
   return (
-    <div className="h-full w-full">
+    <div
+      className="xoverflow-x-hidden scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-amber-500/80 z-0
+    h-screen snap-y snap-mandatory overflow-y-scroll bg-[rgb(36,36,36)] text-gray-400"
+    >
       <Head>
         <title>AD Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Header />
 
-      <main id="home">
-        <Navbar />
-        <Header />
-      </main>
+      <section id="hero" className="snap-start">
+        <Hero />
+      </section>
 
-      <Logos />
-      {<Projects projects={projects} />}
-      <Contact />
+      <section id="about" className="snap-center">
+        <About />
+      </section>
+
+      <section id="skills" className="snap-start">
+        <Skills />
+      </section>
+
+      <section id="projects" className="snap-start">
+        <Projects projects={projects} />
+      </section>
+
+      <section id="contact" className="snap-start">
+        <Contact />
+      </section>
       <Footer />
     </div>
   )
