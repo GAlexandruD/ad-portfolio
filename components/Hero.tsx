@@ -14,12 +14,12 @@ const Hero = (props: Props) => {
   })
 
   return (
-    <div className="relative flex min-h-screen flex-col items-center justify-center pt-6 text-center sm:h-screen sm:w-screen sm:overflow-hidden sm:pt-0">
-      <div className="absolute hidden h-screen min-h-screen w-screen items-center justify-center sm:flex sm:min-h-min">
+    <div className="relative flex min-h-screen flex-col text-center sm:h-screen sm:w-screen sm:overflow-hidden sm:pt-0">
+      <div className="bg-gray absolute hidden h-screen min-h-screen w-screen items-center justify-center sm:flex sm:min-h-min">
         <BackgroundCircles />
       </div>
 
-      <div className="flex h-screen min-h-screen w-screen flex-col items-center justify-center">
+      <div className="flex h-screen min-h-screen w-screen flex-col items-center justify-center space-y-20">
         {/* <h1 className=" mb-10 font-[courier] text-lg font-bold uppercase tracking-[6px] text-gray-400 opacity-60">
           Alexandru Dragos
         </h1> */}

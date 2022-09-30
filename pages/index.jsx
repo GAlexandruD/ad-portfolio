@@ -8,7 +8,6 @@ import Footer from '../components/Footer'
 import { getAllProjects, github, projectsToShow } from '../lib/githubApi'
 import Header from '../components/Header'
 import Skills from '../components/Skills'
-import Navbar from '../components/Navbar'
 import Projects from '../components/Projects'
 import { useEffect, useState } from 'react'
 import Hero from '../components/Hero'
@@ -44,9 +43,9 @@ const Home = ({ projects }) => {
   //   getProjectsOnce()
   // }, [])
 
-  useEffect(() => {
-    console.log('😀😀😀😀😀😀😀😀😀😀', projects[0])
-  }, [])
+  // useEffect(() => {
+  //   console.log('😀😀😀😀😀😀😀😀😀😀', projects)
+  // }, [])
 
   return (
     <div
@@ -72,7 +71,7 @@ const Home = ({ projects }) => {
       </section>
 
       <section id="projects" className="snap-start">
-        <Projects projects={projects} />
+        <Projects />
       </section>
 
       <section id="contact" className="snap-start">
