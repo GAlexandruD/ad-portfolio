@@ -24,30 +24,30 @@ const ContactMe = (props: Props) => {
   }
 
   return (
-    <div className="relative mx-auto flex h-screen max-w-7xl flex-col items-center justify-evenly px-10 text-center md:flex-row md:text-left">
-      <h3 className="absolute top-24 text-2xl uppercase tracking-[20px] text-gray-500">
+    <div className="relative mx-auto flex h-screen max-w-7xl flex-col items-center justify-center px-10 text-center md:text-left">
+      <h3 className="text-center text-2xl uppercase tracking-[20px] text-gray-500 sm:absolute sm:top-10 ">
         Contact
       </h3>
 
-      <div className="flex flex-col space-y-10">
-        <h4 className="text-center text-4xl">
+      <div className="flex h-full max-h-[1000px] w-full flex-col items-center justify-evenly sm:mt-10 sm:space-y-10">
+        <h4 className="mt-10 hidden text-center text-4xl sm:block">
           <span className="underline decoration-green-600/50">Lets talk!</span>
         </h4>
 
-        <div className="space-y-10 ">
+        <div className="sm:space-y-2">
           <div className="flex items-center justify-center space-x-5">
-            <FaPhoneAlt className="h-7 w-7 animate-pulse text-green-600" />
-            <p className="text-2xl">+123 456 7890</p>
+            <FaPhoneAlt className="h-5 w-5 animate-pulse text-green-600 sm:h-7 sm:w-7" />
+            <p className="text-lg sm:text-2xl">+123 456 7890</p>
           </div>
 
           <div className="flex items-center justify-center space-x-5">
-            <FaEnvelope className="h-7 w-7 animate-pulse text-green-600" />
-            <p className="text-2xl">AlexandruD@gmail.com</p>
+            <FaEnvelope className="h-5 w-5 animate-pulse text-green-600 sm:h-7 sm:w-7" />
+            <p className="text-lg sm:text-2xl">AlexandruD@gmail.com</p>
           </div>
 
           <div className="flex items-center justify-center space-x-5">
-            <FaMapMarkedAlt className="h-7 w-7 animate-pulse text-green-600" />
-            <p className="text-2xl">123 Developer Lane</p>
+            <FaMapMarkedAlt className="h-5 w-5 animate-pulse text-green-600 sm:h-7 sm:w-7" />
+            <p className="text-lg sm:text-2xl">123 Developer Lane</p>
           </div>
         </div>
 
@@ -83,7 +83,7 @@ const ContactMe = (props: Props) => {
           />
           <button
             type="submit"
-            className="rounded-md bg-green-600 py-5 px-10 text-lg font-bold text-black"
+            className="rounded-md bg-green-600 py-5 px-10 text-lg font-bold text-black hover:bg-green-700"
           >
             Submit
           </button>

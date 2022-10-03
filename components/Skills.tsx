@@ -32,13 +32,13 @@ const Skills = () => {
       whileInView={{ opacity: 1 }}
       //   viewport={{ once: true }}
       transition={{ duration: 1.5 }}
-      className="xl-space-y-0 relative mx-auto flex min-h-screen max-w-[2000px] flex-col items-center justify-center text-center md:text-left xl:flex-row xl:px-10"
+      className="relative mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center md:text-left xl:space-y-0 xl:px-10"
     >
-      <h3 className="uppercase tracking-[13px] text-gray-500 sm:absolute sm:top-24 sm:text-2xl sm:tracking-[20px]">
+      <h3 className="uppercase tracking-[13px] text-gray-500 sm:absolute sm:top-10 sm:text-2xl sm:tracking-[20px]">
         Skills
       </h3>
 
-      <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-4">
+      <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 sm:pt-20 md:grid-cols-4">
         {/* Get first half of skills and map */}
         {logoPaths.slice(0, logoPaths.length / 2).map((item, index) => {
           return <Logo path={item.path} name={item.name} key={`1.${index}`} />

@@ -5,8 +5,8 @@ type Props = {}
 
 const About = (props: Props) => {
   return (
-    <div className="relative mx-auto flex h-screen max-w-7xl flex-col items-center justify-center px-1 pt-16 text-center sm:justify-evenly sm:px-10 sm:pt-0 md:flex-row md:text-left">
-      <h3 className="mb-4 uppercase tracking-[20px] text-gray-500 sm:absolute sm:top-24 sm:mb-0 sm:text-2xl">
+    <div className="relative mx-auto flex h-screen max-w-7xl flex-col items-center justify-center space-y-10 text-center sm:justify-evenly sm:px-10 md:flex-row md:text-left">
+      <h3 className="mb-4 uppercase tracking-[20px] text-gray-500 sm:absolute sm:top-10 sm:mb-0 sm:text-2xl">
         About
       </h3>
       <motion.img
@@ -22,9 +22,9 @@ const About = (props: Props) => {
           opacity: 1,
         }}
         viewport={{ once: true }}
-        src="/static/Eu.jpeg"
+        src="/static/Eu2.jpg"
         alt="Author's picture"
-        className="h-36 w-36 flex-shrink-0 rounded-full object-cover sm:-mb-20 sm:h-56 sm:w-56 md:mb-0 md:h-96 md:w-64 md:rounded-lg xl:h-[600px] xl:w-[500px]"
+        className="h-36 w-36 flex-shrink-0 rounded-full object-cover brightness-90 grayscale hover:grayscale-[40%] sm:-mb-20 sm:h-56 sm:w-56 md:mb-0 md:h-96 md:w-64 md:rounded-lg xl:h-[500px] xl:w-[400px]"
       />
       <div className="mt-4 space-y-10 px-0 sm:mt-0 md:px-10">
         <h4 className="text-lg font-semibold sm:text-4xl">
