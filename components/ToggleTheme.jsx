@@ -20,7 +20,7 @@ const ToggleTheme = () => {
         e.preventDefault()
         theme === 'dark' ? setTheme('light') : setTheme('dark')
       }}
-      className="m-2 cursor-pointer text-lg hover:text-green-800 "
+      className="cursor-pointer text-lg hover:text-green-800 "
     >
       {theme === 'dark' ? (
         <FaMoon className="h-6 w-6" />

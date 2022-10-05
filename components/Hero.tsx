@@ -19,7 +19,7 @@ const Hero = (props: Props) => {
         <BackgroundCircles />
       </div>
 
-      <div className="flex h-screen max-h-[1000px] min-h-screen w-screen flex-col items-center justify-center space-y-10">
+      <div className=" flex h-screen max-h-[1000px] min-h-screen w-screen flex-col items-center justify-center space-y-10">
         {/* <h1 className=" mb-10 font-[courier] text-lg font-bold uppercase tracking-[6px] text-gray-400 opacity-60">
           Alexandru Dragos
         </h1> */}
@@ -44,13 +44,13 @@ const Hero = (props: Props) => {
               <div className="xbg-[#33ff00]/30 mt-1 h-[2px] bg-gray-300/30"></div>
             </div>
             <Link href="#about">
-              <button className="heroButton">About</button>
+              <button className="heroButton z-50">About</button>
             </Link>
             <Link href="#skills">
-              <button className="heroButton">Skills</button>
+              <button className="heroButton z-50">Skills</button>
             </Link>
             <Link href="#projects">
-              <button className="heroButton">Projects</button>
+              <button className="heroButton z-50">Projects</button>
             </Link>
           </div>
         </div>

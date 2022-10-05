@@ -11,8 +11,8 @@ import Skills from '../components/Skills'
 import Projects from '../components/Projects'
 import { useEffect, useState } from 'react'
 import Hero from '../components/Hero'
-import Glitch from '../components/Glitch'
 import About from '../components/About'
+import Link from 'next/link'
 
 // This function gets called at build time on server-side.
 // It may be called again, on a serverless function, if
@@ -49,8 +49,8 @@ const Home = ({ projects }) => {
 
   return (
     <div
-      className="scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-amber-500/80 z-0 h-screen
-    snap-y snap-mandatory overflow-x-hidden overflow-y-scroll bg-[rgb(36,36,36)] text-gray-400"
+      className="z-0 h-screen snap-y snap-mandatory
+    overflow-x-hidden overflow-y-scroll bg-[rgb(36,36,36)] text-gray-400"
     >
       <Head>
         <title>AD Portfolio</title>
@@ -58,11 +58,11 @@ const Home = ({ projects }) => {
       </Head>
       <Header />
 
-      <section id="hero" className="snap-start">
+      <section id="hero" className="snap-center">
         <Hero />
       </section>
 
-      <section id="about" className="snap-center">
+      <section id="about" className="snap-start">
         <About />
       </section>
 
@@ -77,7 +77,12 @@ const Home = ({ projects }) => {
       <section id="contact" className="snap-start">
         <Contact />
       </section>
-      <Footer />
+
+      <Link href="#hero">
+        <a>
+          <Footer />
+        </a>
+      </Link>
     </div>
   )
 }

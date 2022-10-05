@@ -1,15 +1,19 @@
-import Image from 'next/image'
 import { SiGithub, SiLinkedin } from 'react-icons/si'
-import { BiEnvelope, BiEnvelopeOpen } from 'react-icons/bi'
-import { CgMenu } from 'react-icons/cg'
-import { RiArrowDownSLine } from 'react-icons/ri'
+import { BiEnvelope } from 'react-icons/bi'
+import { MdContactMail } from 'react-icons/md'
 import { WindupChildren, Pace } from 'windups'
+import { AiOutlineClose } from 'react-icons/ai'
+import { IoClose } from 'react-icons/io5'
+import { CgClose } from 'react-icons/cg'
 import { motion } from 'framer-motion'
 import ToggleTheme from './ToggleTheme'
+import { useState } from 'react'
 
 type Props = {}
 
 const Header = (props: Props) => {
+  const [open, setOpen] = useState(false)
+
   return (
     <>
       <header className="sticky top-0 z-50 mx-auto hidden max-w-7xl items-center justify-between p-5 text-gray-500 sm:flex xl:items-center">
@@ -73,8 +77,52 @@ const Header = (props: Props) => {
         </motion.div>
       </header>
 
-      <header className="sticky top-0 z-50 flex justify-end p-5 text-gray-500 sm:hidden">
-        <CgMenu className="ml-4 h-6 w-6 cursor-pointer hover:text-green-800" />
+      <header className="absolute top-0 right-4 z-50 flex flex-col items-end p-4 text-gray-500 sm:hidden">
+        {open ? (
+          <CgClose
+            className="h-6 w-6 cursor-pointer hover:text-green-800"
+            onClick={() => setOpen(!open)}
+          />
+        ) : (
+          <MdContactMail
+            className="h-6 w-6 cursor-pointer hover:text-green-800"
+            onClick={() => setOpen(!open)}
+          />
+        )}
+        {open && (
+          <ul className="flex flex-col items-end justify-center">
+            <li className="mt-4">
+              <a
+                href="https://github.com/GAlexandruD"
+                target="_blank"
+                className=""
+              >
+                <SiGithub className="h-6 w-6 cursor-pointer hover:text-green-800" />
+              </a>
+            </li>
+
+            <li className="mt-4">
+              <a
+                href="https://www.linkedin.com/in/dragos-ghiugan-96492938/"
+                target="_blank"
+                className=""
+              >
+                <SiLinkedin className="h-6 w-6 cursor-pointer hover:text-green-800" />
+              </a>
+            </li>
+            <li className="mt-4">
+              <a
+                href="#contact"
+                className="flex flex-row items-center justify-center hover:text-green-800"
+              >
+                <BiEnvelope className="h-7 w-7" />
+              </a>
+            </li>
+            <li className="mt-4">
+              <ToggleTheme />
+            </li>
+          </ul>
+        )}
       </header>
     </>
   )

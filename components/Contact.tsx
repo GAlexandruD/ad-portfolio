@@ -24,8 +24,8 @@ const ContactMe = (props: Props) => {
   }
 
   return (
-    <div className="relative mx-auto flex h-screen max-w-7xl flex-col items-center justify-center px-10 text-center md:text-left">
-      <h3 className="text-center text-2xl uppercase tracking-[20px] text-gray-500 sm:absolute sm:top-10 ">
+    <div className="relative mx-auto flex h-screen max-w-7xl flex-col items-center justify-center text-center sm:px-10 sm:pb-20 md:text-left">
+      <h3 className="mt-4 text-center uppercase tracking-[20px] text-gray-500 sm:absolute sm:top-10 sm:text-2xl ">
         Contact
       </h3>
 
@@ -36,18 +36,18 @@ const ContactMe = (props: Props) => {
 
         <div className="sm:space-y-2">
           <div className="flex items-center justify-center space-x-5">
-            <FaPhoneAlt className="h-5 w-5 animate-pulse text-green-600 sm:h-7 sm:w-7" />
-            <p className="text-lg sm:text-2xl">+123 456 7890</p>
+            <FaPhoneAlt className="h-4 w-4 animate-pulse text-green-600 sm:h-7 sm:w-7" />
+            <p className="sm:text-2xl">+40 721 652 001</p>
           </div>
 
           <div className="flex items-center justify-center space-x-5">
-            <FaEnvelope className="h-5 w-5 animate-pulse text-green-600 sm:h-7 sm:w-7" />
-            <p className="text-lg sm:text-2xl">AlexandruD@gmail.com</p>
+            <FaEnvelope className="h-4 w-4 animate-pulse text-green-600 sm:h-7 sm:w-7" />
+            <p className="sm:text-2xl">AlexandruD@gmail.com</p>
           </div>
 
           <div className="flex items-center justify-center space-x-5">
-            <FaMapMarkedAlt className="h-5 w-5 animate-pulse text-green-600 sm:h-7 sm:w-7" />
-            <p className="text-lg sm:text-2xl">123 Developer Lane</p>
+            <FaMapMarkedAlt className="h-4 w-4 animate-pulse text-green-600 sm:h-7 sm:w-7" />
+            <p className="sm:text-2xl">Bucharest, Romania</p>
           </div>
         </div>
 
@@ -83,7 +83,7 @@ const ContactMe = (props: Props) => {
           />
           <button
             type="submit"
-            className="rounded-md bg-green-600 py-5 px-10 text-lg font-bold text-black hover:bg-green-700"
+            className="z-50 rounded-md bg-green-600 py-5 px-10 text-lg font-bold text-black hover:bg-green-700"
           >
             Submit
           </button>

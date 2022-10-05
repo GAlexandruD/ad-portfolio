@@ -3,14 +3,9 @@ type Props = {}
 
 const Footer = (props: Props) => {
   return (
-    <div
-      id="go-top"
-      className="relative flex justify-center text-5xl sm:text-7xl md:text-9xl"
-    >
-      <a className="scroll-smooth" title="Back to Top" href="#home">
-        <RiArrowDownSLine className="rotate-180 animate-pulse text-center font-bold" />
-      </a>
-    </div>
+    <footer className="sticky bottom-0 flex justify-center text-4xl sm:bottom-5 sm:text-5xl md:text-7xl">
+      <RiArrowDownSLine className="xanimate-pulse rotate-180 text-center font-bold opacity-30" />
+    </footer>
   )
 }
 

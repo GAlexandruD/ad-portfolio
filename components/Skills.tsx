@@ -34,7 +34,7 @@ const Skills = () => {
       transition={{ duration: 1.5 }}
       className="relative mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center md:text-left xl:space-y-0 xl:px-10"
     >
-      <h3 className="uppercase tracking-[13px] text-gray-500 sm:absolute sm:top-10 sm:text-2xl sm:tracking-[20px]">
+      <h3 className="mt-4 uppercase tracking-[13px] text-gray-500 sm:absolute sm:top-10 sm:text-2xl sm:tracking-[20px]">
         Skills
       </h3>
 

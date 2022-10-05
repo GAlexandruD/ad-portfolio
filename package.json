@@ -18,6 +18,7 @@
     "react-hook-form": "^7.36.1",
     "react-icons": "^4.4.0",
     "react-simple-typewriter": "^4.0.2",
+    "swiper": "^8.4.2",
     "windups": "^1.1.9"
   },
   "devDependencies": {
@@ -27,6 +28,7 @@
     "postcss": "^8.4.16",
     "prettier": "^2.5.1",
     "prettier-plugin-tailwindcss": "^0.1.1",
+    "tailwind-scrollbar": "^2.0.1",
     "tailwindcss": "^3.0.7",
     "typescript": "4.5.4"
   }
