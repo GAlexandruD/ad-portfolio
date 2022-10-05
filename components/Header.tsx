@@ -70,7 +70,7 @@ const Header = (props: Props) => {
             className="flex flex-row items-center hover:text-green-800"
           >
             <BiEnvelope className="ml-2 h-8 w-8" />
-            <p className="ml-2 hidden text-sm uppercase md:inline-flex">
+            <p className="ml-2 hidden text-sm uppercase lg:inline-flex">
               Get in touch
             </p>
           </a>

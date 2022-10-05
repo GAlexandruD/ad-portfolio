@@ -11,6 +11,7 @@ import 'swiper/css/navigation'
 // import required modules
 import { Navigation } from 'swiper'
 import Laptop from './Laptop'
+import Link from 'next/link'
 
 type Props = {}
 
@@ -41,10 +42,10 @@ const Projects = () => {
         >
           {projects.map((project, idx) => (
             <SwiperSlide key={idx}>
-              <div className="flex h-screen w-screen flex-shrink-0 snap-center flex-col items-center justify-center space-y-5 p-20 md:p-44">
+              <div className="flex h-screen w-screen snap-center flex-col items-center justify-center overflow-hidden sm:space-y-10 sm:p-20">
                 <motion.div
                   initial={{
-                    y: -300,
+                    y: -100,
                     opacity: 0,
                   }}
                   transition={{
@@ -57,23 +58,41 @@ const Projects = () => {
                   viewport={{
                     once: true,
                   }}
-                  className="hidden sm:block"
+                  className=""
                 >
-                  <Laptop laptopDisplay="/static/projects/airbnb-clone.png" />
+                  <Link href={'#'}>
+                    <a>
+                      <Laptop laptopDisplay="/static/projects/airbnb-clone.png" />
+                    </a>
+                  </Link>
+                  <p className="text-center">
+                    Updated:{` ${project.pushed_at.split('T')[0]}`}
+                  </p>
                 </motion.div>
 
-                <div className="max-w-6xl space-y-10 px-0 md:px-10">
+                <div className="max-w-6xl space-y-2 sm:space-y-10">
                   <h4 className="text-center font-semibold sm:text-4xl">
-                    <span className="">
+                    <span className="sm:hidden">
+                      {idx + 1} of {projects.length}:
+                    </span>
+                    <span className="hidden sm:block">
                       Showing {idx + 1} of {projects.length}:
                     </span>{' '}
-                    <span className="underline decoration-green-600/50">
-                      {project.name}
-                    </span>
+                    <br className="sm:hidden" />
+                    <Link href={'#'}>
+                      <a className="underline decoration-green-600 hover:animate-pulse">
+                        {project.name}
+                      </a>
+                    </Link>
                   </h4>
 
-                  <p className="-m-8 text-center sm:text-lg md:text-left">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  <p className="text-center sm:text-lg">
+                    Really small description about the project. <br />
+                    <Link href={'#'}>
+                      <a className="text-green-600 hover:animate-pulse">
+                        Read more...
+                      </a>
+                    </Link>
                   </p>
                 </div>
               </div>

@@ -30,7 +30,7 @@ const About = (props: Props) => {
         <div className="mt-4 flex flex-col space-y-10 px-0 sm:mt-0 md:px-10">
           <h4 className="text-lg font-semibold sm:text-4xl">
             Here is a{' '}
-            <span className="underline decoration-green-500/50">little</span>{' '}
+            <span className="underline decoration-green-600">little</span>{' '}
             background
           </h4>
           <p className="text-base">

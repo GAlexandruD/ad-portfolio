@@ -25,9 +25,9 @@ const Hero = (props: Props) => {
         </h1> */}
 
         <img
-          src="/static/Eu.jpeg"
+          src="/static/avatar/7516966.png"
           alt="The author"
-          className="z-20 h-32 w-32 rounded-full object-cover hover:opacity-80 sm:h-64 sm:w-64"
+          className="z-20 h-40 w-40 rounded-full bg-white/50 object-cover opacity-60 invert hover:opacity-80 sm:h-64 sm:w-64"
         />
         <h1 className="px-10 text-xl font-semibold sm:text-2xl lg:text-4xl">
           <span className="mr-3">{text}</span>
