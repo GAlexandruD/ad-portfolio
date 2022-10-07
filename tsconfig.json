@@ -24,7 +24,7 @@
     "pages/api/github.js",
     "pages/api/github.js",
     "components/Projects.tsx",
-    "pages/index.jsx"
+    "pages/index.tsx"
   ],
   "exclude": ["node_modules"]
 }

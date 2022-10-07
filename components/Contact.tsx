@@ -1,11 +1,13 @@
 import React from 'react'
-import { BsFillTelephoneFill } from 'react-icons/bs'
 import { FaMapMarkedAlt, FaEnvelope, FaPhoneAlt } from 'react-icons/fa'
 import { SubmitHandler, useForm } from 'react-hook-form'
+import { PageInfo } from '../typings'
 
-type Props = {}
+type Props = {
+  pageInfo: PageInfo
+}
 
-const ContactMe = (props: Props) => {
+const ContactMe = ({ pageInfo }: Props) => {
   type Inputs = {
     name: string
     email: string
@@ -15,11 +17,11 @@ const ContactMe = (props: Props) => {
 
   const { register, handleSubmit } = useForm<Inputs>()
   const onSubmit: SubmitHandler<Inputs> = (formData) => {
-    window.location.href = `mailto:alexandrud@gmail.com?subject=${encodeURIComponent(
-      formData.subject
-    )}&body=${encodeURIComponent(formData.name)} (${
-      formData.email
-    }) wrote:<br><br>
+    window.location.href = `mailto:${
+      pageInfo.email
+    }?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
+      formData.name
+    )} (${formData.email}) wrote:<br><br>
     ${encodeURIComponent(formData.message)}`
   }
 
@@ -37,17 +39,17 @@ const ContactMe = (props: Props) => {
         <div className="sm:space-y-2">
           <div className="flex items-center justify-center space-x-5">
             <FaPhoneAlt className="h-4 w-4 animate-pulse text-green-600 sm:h-7 sm:w-7" />
-            <p className="sm:text-2xl">+40 721 652 001</p>
+            <p className="sm:text-2xl">{pageInfo.phoneNumber}</p>
           </div>
 
           <div className="flex items-center justify-center space-x-5">
             <FaEnvelope className="h-4 w-4 animate-pulse text-green-600 sm:h-7 sm:w-7" />
-            <p className="sm:text-2xl">AlexandruD@gmail.com</p>
+            <p className="sm:text-2xl">{pageInfo.email}</p>
           </div>
 
           <div className="flex items-center justify-center space-x-5">
             <FaMapMarkedAlt className="h-4 w-4 animate-pulse text-green-600 sm:h-7 sm:w-7" />
-            <p className="sm:text-2xl">Bucharest, Romania</p>
+            <p className="sm:text-2xl">{pageInfo.address}</p>
           </div>
         </div>
 

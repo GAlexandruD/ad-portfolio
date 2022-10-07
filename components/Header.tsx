@@ -77,7 +77,11 @@ const Header = (props: Props) => {
         </motion.div>
       </header>
 
-      <header className="absolute top-0 right-4 z-50 flex flex-col items-end p-4 text-gray-500 sm:hidden">
+      {/* Mobile menu */}
+      <header
+        style={{ backgroundColor: `${open ? '#242424' : 'transparent'}` }}
+        className="absolute top-0 right-4 z-50 flex flex-col items-center justify-center p-4 text-gray-500 sm:hidden"
+      >
         {open ? (
           <CgClose
             className="h-6 w-6 cursor-pointer hover:text-green-800"
@@ -90,7 +94,7 @@ const Header = (props: Props) => {
           />
         )}
         {open && (
-          <ul className="flex flex-col items-end justify-center">
+          <ul className="flex flex-col items-center">
             <li className="mt-4">
               <a
                 href="https://github.com/GAlexandruD"

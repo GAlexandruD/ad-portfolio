@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { type } from 'os'
 
 type Props = { path: string; name: string; directionLeft?: boolean }
 
@@ -24,7 +23,7 @@ const Logo = (props: Props) => {
           objectFit="scale-down"
         />
       </motion.div>
-      <p className="cursor-default text-center text-xl hover:text-[#545721] dark:hover:text-yellow-100">
+      <p className="cursor-default text-center text-xl hover:text-green-700 dark:hover:text-green-500">
         {props.name}
       </p>
     </div>

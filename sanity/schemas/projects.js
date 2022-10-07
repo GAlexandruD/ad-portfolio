@@ -4,56 +4,43 @@ export default {
   type: 'document',
   fields: [
     {
-      name: 'name',
-      title: 'Name',
-      type: 'string',
-    },
-    {
       name: 'title',
       title: 'Title',
       type: 'string',
     },
     {
-      name: 'heroImage',
-      title: 'HeroImage',
+      name: 'image',
+      title: 'Image',
       type: 'image',
       options: {
         hotspot: true,
       },
     },
     {
-      name: 'aboutInfo',
-      title: 'AboutInfo',
-      type: 'string',
+      name: 'summary',
+      title: 'Summary',
+      type: 'text',
     },
     {
-      name: 'aboutPicture',
-      title: 'AboutImage',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
+      name: 'description',
+      title: 'Description',
+      type: 'text',
     },
     {
-      name: 'phoneNumber',
-      title: 'PhoneNumber',
-      type: 'string',
+      name: 'githubUrl',
+      title: 'GithubUrl',
+      type: 'url',
     },
     {
-      name: 'email',
-      title: 'Email',
-      type: 'string',
+      name: 'liveUrl',
+      title: 'LiveUrl',
+      type: 'url',
     },
     {
-      name: 'address',
-      title: 'Address',
-      type: 'string',
-    },
-    {
-      name: 'socials',
-      title: 'Socials',
+      name: 'technologies',
+      title: 'Technologies',
       type: 'array',
-      of: [{ type: 'reference', to: { type: 'social' } }],
+      of: [{ type: 'reference', to: { type: 'skills' } }],
     },
   ],
 }

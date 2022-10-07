@@ -1,14 +1,17 @@
 import Link from 'next/link'
 import React from 'react'
 import { Cursor, useTypewriter } from 'react-simple-typewriter'
+import { PageInfo } from '../typings'
 import BackgroundCircles from './BackgroundCircles'
 import Glitch from './Glitch'
 
-type Props = {}
+type Props = {
+  pageInfo: PageInfo
+}
 
-const Hero = (props: Props) => {
+const Hero = ({ pageInfo }: Props) => {
   const [text, count] = useTypewriter({
-    words: ['Hello, I am Alexandru Dragos'],
+    words: [pageInfo.name],
     loop: 1,
     delaySpeed: 2000,
   })

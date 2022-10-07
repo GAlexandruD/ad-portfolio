@@ -1,9 +1,13 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { PageInfo } from '../typings'
+import { urlFor } from '../sanity'
 
-type Props = {}
+type Props = {
+  pageInfo: PageInfo
+}
 
-const About = (props: Props) => {
+const About = ({ pageInfo }: Props) => {
   return (
     <div className="relative mx-auto flex h-screen max-w-7xl flex-col items-center space-y-10 px-2 text-center sm:px-10">
       <h3 className="mt-4 uppercase tracking-[20px] text-gray-500 sm:top-10 sm:text-2xl md:absolute">
@@ -24,7 +28,7 @@ const About = (props: Props) => {
             opacity: 1,
           }}
           viewport={{ once: true }}
-          src="/static/Eu2.jpg"
+          src={urlFor(pageInfo.aboutPicture).url()}
           alt="Author's picture"
         />
         <div className="mt-4 flex flex-col space-y-10 px-0 sm:mt-0 md:px-10">
@@ -33,9 +37,7 @@ const About = (props: Props) => {
             <span className="underline decoration-green-600">little</span>{' '}
             background
           </h4>
-          <p className="text-base">
-            I am a developer with a passion for web applications.
-          </p>
+          <p className="text-base">{pageInfo.aboutInfo}</p>
         </div>
       </div>
     </div>
