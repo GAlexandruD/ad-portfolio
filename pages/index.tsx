@@ -29,13 +29,32 @@ type Props = {
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const pageInfo: PageInfo = await fetchPageInfo()
   const skills: DbSkills[] = await fetchSkills()
-  const projects: DbProjects[] = await fetchProjects()
   const socials: Social[] = await fetchSocials()
+
+  // Fetching projects from Sanity and Github. Verify the updated_at value and if it's newer than the one in Sanity, update it.
+  const sanityProjects: DbProjects[] = await fetchProjects()
+  const githubProjects = await getAllProjects() // Fetching all projects from Github
+  // Compare the projects from Sanity and Github and update the ones that are newer
+  const updatedProjects = sanityProjects.map((project) => {
+    const githubProject = githubProjects.find(
+      (p: any) => p.html_url === project.githubUrl
+    )
+    if (githubProject) {
+      if (githubProject.pushed_at !== project.updated_at) {
+        // TODO: Update the project's date on Sanity
+        // FIXME: The date is not updated on Sanity
+        // const newGitHubDate = await JSON.parse()
+
+        return { ...project, updated_at: githubProject.pushed_at }
+      }
+    }
+    return project
+  })
 
   return {
     props: {
       pageInfo,
-      projects,
+      projects: updatedProjects,
       skills,
       socials,
     },

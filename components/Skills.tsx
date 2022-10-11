@@ -1,7 +1,7 @@
 import Logo from './Logo'
 import { motion } from 'framer-motion'
 import { DbSkills } from '../typings'
-import { urlFor } from '../sanity'
+import { urlFor } from '../lib/sanity'
 
 type Props = {
   skills: DbSkills[]

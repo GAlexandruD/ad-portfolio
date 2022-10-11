@@ -4,6 +4,7 @@ import { Cursor, useTypewriter } from 'react-simple-typewriter'
 import { PageInfo } from '../typings'
 import BackgroundCircles from './BackgroundCircles'
 import Glitch from './Glitch'
+import { urlFor } from '../lib/sanity'
 
 type Props = {
   pageInfo: PageInfo
@@ -28,9 +29,9 @@ const Hero = ({ pageInfo }: Props) => {
         </h1> */}
 
         <img
-          src="/static/avatar/7516966.png"
+          src={urlFor(pageInfo.heroImage).url()}
           alt="The author"
-          className="z-20 h-40 w-40 rounded-full bg-white/50 object-cover opacity-60 invert hover:opacity-80 sm:h-64 sm:w-64"
+          className="z-20 h-40 w-40 rounded-full object-cover opacity-60 hover:transform hover:opacity-80 dark:invert sm:h-64 sm:w-64"
         />
         <h1 className="px-10 text-xl font-semibold sm:text-2xl lg:text-4xl">
           <span className="mr-3">{text}</span>

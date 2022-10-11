@@ -39,6 +39,7 @@ export interface DbProjects extends SanityBody {
   summary: text
   description: text
   githubUrl: string
+  updated_at: string
   liveUrl: string
   technologies: Technology[]
 }

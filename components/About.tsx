@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { PageInfo } from '../typings'
-import { urlFor } from '../sanity'
+import { urlFor } from '../lib/sanity'
 
 type Props = {
   pageInfo: PageInfo
@@ -10,7 +10,7 @@ type Props = {
 const About = ({ pageInfo }: Props) => {
   return (
     <div className="relative mx-auto flex h-screen max-w-7xl flex-col items-center space-y-10 px-2 text-center sm:px-10">
-      <h3 className="mt-4 uppercase tracking-[20px] text-gray-500 sm:top-10 sm:text-2xl md:absolute">
+      <h3 className="mt-4 uppercase tracking-[20px] text-gray-500 sm:top-10 sm:text-2xl">
         About
       </h3>
       <div className="flex flex-1 flex-col items-center justify-center md:flex-row md:text-left">

@@ -32,6 +32,11 @@ export default {
       type: 'url',
     },
     {
+      name: 'updated_at',
+      title: 'Updated_at',
+      type: 'datetime',
+    },
+    {
       name: 'liveUrl',
       title: 'LiveUrl',
       type: 'url',

@@ -14,7 +14,7 @@ import Laptop from './Laptop'
 import Link from 'next/link'
 import { DbProjects } from '../typings'
 
-import { urlFor } from '../sanity'
+import { urlFor } from '../lib/sanity'
 
 type Props = {
   projects: DbProjects[]
@@ -73,10 +73,7 @@ const Projects = ({ projects }: Props) => {
                       </a>
                     </Link>
                     <p className="text-center">
-                      Updated: To be implemented
-                      {
-                        // ` ${project.pushed_at.split('T')[0]}`
-                      }
+                      Updated: {project.updated_at.split('T')[0]}
                     </p>
                   </motion.div>
 
