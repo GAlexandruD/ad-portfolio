@@ -22,7 +22,6 @@
     "components/Example.jsx",
     "components/TypeWritter.jsx",
     "pages/api/github.js",
-    "pages/api/github.js",
     "components/Projects.tsx",
     "pages/index.tsx"
   ],

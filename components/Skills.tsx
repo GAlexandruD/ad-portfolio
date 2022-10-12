@@ -28,6 +28,8 @@ const Skills = ({ skills }: Props) => {
               path={urlFor(item.image).url()}
               name={item.title}
               key={`1.${index}`}
+              animate
+              displayText
             />
           )
         })}
@@ -40,6 +42,8 @@ const Skills = ({ skills }: Props) => {
               name={item.title}
               key={`2.${index}`}
               directionLeft
+              animate
+              displayText
             />
           )
         })}

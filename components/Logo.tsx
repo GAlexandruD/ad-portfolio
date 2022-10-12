@@ -1,15 +1,21 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 
-type Props = { path: string; name: string; directionLeft?: boolean }
+type Props = {
+  path: string
+  name: string
+  directionLeft?: boolean
+  animate?: boolean
+  displayText?: boolean
+}
 
 const Logo = (props: Props) => {
   return (
     <div className="mr-4 flex flex-col items-center justify-center p-4">
       <motion.div
         initial={{
-          y: props.directionLeft ? -30 : 30,
-          rotate: -180,
+          y: props.animate ? (props.directionLeft ? -30 : 30) : 0,
+          rotate: props.animate ? -180 : 0,
         }}
         transition={{ duration: 0.8, type: 'spring', bounce: 0.4 }}
         whileInView={{ y: 0, rotate: 0 }}
@@ -23,7 +29,11 @@ const Logo = (props: Props) => {
           objectFit="scale-down"
         />
       </motion.div>
-      <p className="cursor-default text-center text-xl hover:text-green-700 dark:hover:text-green-500">
+      <p
+        className={`${
+          props.displayText ? '' : 'hidden'
+        } cursor-default text-center text-xl hover:text-green-700 dark:hover:text-green-500`}
+      >
         {props.name}
       </p>
     </div>

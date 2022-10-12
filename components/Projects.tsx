@@ -67,7 +67,7 @@ const Projects = ({ projects }: Props) => {
                     }}
                     className=""
                   >
-                    <Link href={'#'}>
+                    <Link href={`/project/${project._id}`}>
                       <a>
                         <Laptop laptopDisplay={urlFor(project.image).url()} />
                       </a>
@@ -95,7 +95,7 @@ const Projects = ({ projects }: Props) => {
 
                     <p className="text-center sm:text-lg">
                       {project.summary} <br />
-                      <Link href={'#'}>
+                      <Link href={`/project/${project._id}`}>
                         <a className="text-green-600 hover:animate-pulse">
                           Read more...
                         </a>

@@ -2,18 +2,13 @@ import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
-
-import { getAllProjects, github, projectsToShow } from '../lib/githubApi'
 import Header from '../components/Header'
 import Skills from '../components/Skills'
 import Projects from '../components/Projects'
 import Hero from '../components/Hero'
 import About from '../components/About'
 import { PageInfo, DbProjects, DbSkills, Social } from '../typings'
-import { fetchSkills } from '../lib/fetchSkills'
-import { fetchProjects } from '../lib/fetchProjects'
-import { fetchSocials } from '../lib/fetchSocials'
-import { fetchPageInfo } from '../lib/fetchPageInfo'
+import fetchAll from '../lib/fetchAll'
 
 type Props = {
   pageInfo: PageInfo
@@ -27,36 +22,14 @@ type Props = {
 // revalidation is enabled and a new request comes in
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const pageInfo: PageInfo = await fetchPageInfo()
-  const skills: DbSkills[] = await fetchSkills()
-  const socials: Social[] = await fetchSocials()
-
-  // Fetching projects from Sanity and Github. Verify the updated_at value and if it's newer than the one in Sanity, update it.
-  const sanityProjects: DbProjects[] = await fetchProjects()
-  const githubProjects = await getAllProjects() // Fetching all projects from Github
-  // Compare the projects from Sanity and Github and update the ones that are newer
-  const updatedProjects = sanityProjects.map((project) => {
-    const githubProject = githubProjects.find(
-      (p: any) => p.html_url === project.githubUrl
-    )
-    if (githubProject) {
-      if (githubProject.pushed_at !== project.updated_at) {
-        // TODO: Update the project's date on Sanity
-        // FIXME: The date is not updated on Sanity
-        // const newGitHubDate = await JSON.parse()
-
-        return { ...project, updated_at: githubProject.pushed_at }
-      }
-    }
-    return project
-  })
+  const result = await fetchAll()
 
   return {
     props: {
-      pageInfo,
-      projects: updatedProjects,
-      skills,
-      socials,
+      pageInfo: result.pageInfo,
+      projects: result.projects,
+      skills: result.skills,
+      socials: result.socials,
     },
     // Next.js will attempt to re-generate the page:
     // - When a request comes in

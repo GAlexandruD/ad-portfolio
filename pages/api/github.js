@@ -1,9 +1,11 @@
+// FIXME: Should be deleted if not used
+
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 // import { atob } from 'buffer'
 import { request } from '@octokit/request'
 // import { buffer } from 'stream/consumers'
 
-const github = async (req, res) => {
+const githubApi = async (req, res) => {
   const repos = await request('GET /users/{owner}/repos', {
     headers: {
       authorization: `token ${process.env.GITHUB_TOKEN}`,
@@ -52,4 +54,4 @@ const github = async (req, res) => {
   // console.log(text)
 }
 
-export default github
+export default githubApi
