@@ -1,12 +1,16 @@
 import { DbProjects } from '../typings'
+import { groq } from 'next-sanity'
+import { sanityClient } from './sanity'
+
+const query = groq`
+*[_type == "projects"] {
+    ...,
+    technologies[]->
+}
+`
 
 export const fetchProjects = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getProjects`)
-
-  const data = await res.json()
-  const projects: DbProjects[] = data.projects
-
-  // console.log('fetching projects', projects)
+  const projects: DbProjects[] = await sanityClient.fetch(query)
 
   return projects
 }
