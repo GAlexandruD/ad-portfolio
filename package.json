@@ -20,6 +20,7 @@
     "react-hook-form": "^7.36.1",
     "react-icons": "^4.4.0",
     "react-simple-typewriter": "^4.0.2",
+    "sharp": "^0.31.1",
     "swiper": "^8.4.2",
     "windups": "^1.1.9"
   },

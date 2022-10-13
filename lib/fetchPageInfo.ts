@@ -7,7 +7,7 @@ const query = groq`
 `
 
 export const fetchPageInfo = async () => {
-  const pageInfo: PageInfo[] = await sanityClient.fetch(query)
+  const pageInfo: PageInfo = await sanityClient.fetch(query)
 
   return pageInfo
 }
