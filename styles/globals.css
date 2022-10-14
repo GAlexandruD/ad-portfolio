@@ -14,3 +14,15 @@ html {
     @apply rounded-sm border-b border-[#242424] bg-slate-400/10 px-6 py-4 text-gray-500 placeholder-gray-500 outline-none transition-all focus:border-green-500/40 focus:text-green-500/40;
   }
 }
+
+/* .markdown code {
+  display: block;
+  white-space: pre-wrap;
+} */
+
+.markdown code.hljs {
+  /* white-space: pre-wrap; */
+  /* background-color: aquamarine; */
+  width: 100%;
+  /* max-width: 300px; */
+}

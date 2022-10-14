@@ -67,7 +67,10 @@ const Projects = ({ projects }: Props) => {
                     }}
                     className=""
                   >
-                    <Link href={`/project/${project._id}`}>
+                    <Link
+                      href={`/?id=${project._id}`}
+                      as={`/project/${project._id}`}
+                    >
                       <a>
                         <Laptop laptopDisplay={urlFor(project.image).url()} />
                       </a>
