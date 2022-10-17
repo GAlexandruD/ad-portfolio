@@ -21,13 +21,19 @@
     "@sanity/desk-tool": "^2.34.1",
     "@sanity/eslint-config-studio": "^2.0.0",
     "@sanity/vision": "^2.34.0",
+    "ajv": "^8.11.0",
+    "color-string": "^1.9.1",
     "eslint": "^8.6.0",
     "glob-parent": "^6.0.2",
+    "jsdom": "^20.0.1",
+    "mem": "^9.0.2",
     "nth-check": "^2.1.1",
+    "postcss": "^8.4.18",
     "prop-types": "^15.7",
     "react": "^17.0",
     "react-dom": "^17.0",
-    "styled-components": "^5.2.0"
+    "styled-components": "^5.2.0",
+    "yargs-parser": "^21.1.1"
   },
   "devDependencies": {},
   "repository": {
