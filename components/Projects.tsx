@@ -89,7 +89,10 @@ const Projects = ({ projects }: Props) => {
                         Showing {idx + 1} of {projects.length}:
                       </span>{' '}
                       <br className="sm:hidden" />
-                      <Link href={'#'}>
+                      <Link
+                        href={`/?id=${project._id}`}
+                        as={`/project/${project._id}`}
+                      >
                         <a className="underline decoration-green-600 hover:animate-pulse">
                           {project.title}
                         </a>
@@ -98,7 +101,10 @@ const Projects = ({ projects }: Props) => {
 
                     <p className="text-center sm:text-lg">
                       {project.summary} <br />
-                      <Link href={`/project/${project._id}`}>
+                      <Link
+                        href={`/?id=${project._id}`}
+                        as={`/project/${project._id}`}
+                      >
                         <a className="text-green-600 hover:animate-pulse">
                           Read more...
                         </a>

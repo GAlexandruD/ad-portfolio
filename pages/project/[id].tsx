@@ -14,7 +14,7 @@ import dynamic from 'next/dynamic'
 import 'highlight.js/styles/github-dark.css'
 import DisplayProjectDetails from '../../components/DisplayProjectDetails'
 
-dynamic(() => import('highlight.js/styles/github.css')) // Does not work...
+// dynamic(() => import('highlight.js/styles/github.css')) // Does not work...
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const result = await fetchAll()
@@ -54,7 +54,7 @@ const ProjectDetails = (initialProps: any) => {
 
   return (
     <>
-      <DisplayProjectDetails id={id} project={project} />
+      <DisplayProjectDetails project={project} />
     </>
   )
 }

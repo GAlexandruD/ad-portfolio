@@ -57,14 +57,14 @@ const Home = ({ pageInfo, projects, skills, socials }: Props) => {
       {!!router.query.id && (
         <div className="absolute top-0 left-0 z-50 h-screen w-screen border-8 border-green-500/40 bg-[#242424]/90">
           <div className="h-full w-full overflow-auto ">
-            <DisplayProjectDetails id={router.query.id} project={project} />
+            <DisplayProjectDetails project={project as DbProjects} />
           </div>
         </div>
       )}
 
       <div
         className="z-0 h-screen snap-y snap-mandatory
-      overflow-x-hidden overflow-y-scroll bg-[rgb(36,36,36)] text-gray-400"
+      overflow-x-hidden overflow-y-scroll bg-gray-200 text-gray-600 dark:bg-[rgb(36,36,36)] dark:text-gray-400"
       >
         <Head>
           <title>AD Portfolio</title>

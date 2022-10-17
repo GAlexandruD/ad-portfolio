@@ -19,11 +19,11 @@ const Hero = ({ pageInfo }: Props) => {
 
   return (
     <div className="relative flex min-h-screen flex-col text-center sm:h-screen sm:w-screen sm:overflow-hidden sm:pt-0">
-      <div className="bg-gray absolute hidden h-screen min-h-screen w-screen items-center justify-center sm:flex sm:min-h-min">
+      <div className="absolute hidden h-screen min-h-screen w-screen items-center justify-center sm:flex sm:min-h-min">
         <BackgroundCircles />
       </div>
 
-      <div className=" flex h-screen max-h-[1000px] min-h-screen w-screen flex-col items-center justify-center space-y-10">
+      <div className="flex h-screen max-h-[1000px] min-h-screen w-screen flex-col items-center justify-center space-y-10">
         {/* <h1 className=" mb-10 font-[courier] text-lg font-bold uppercase tracking-[6px] text-gray-400 opacity-60">
           Alexandru Dragos
         </h1> */}
@@ -35,17 +35,20 @@ const Hero = ({ pageInfo }: Props) => {
         />
         <h1 className="px-10 text-xl font-semibold sm:text-2xl lg:text-4xl">
           <span className="mr-3">{text}</span>
-          <Cursor cursorColor="white" />
+          <Cursor cursorColor="gray" />
         </h1>
-        <h2 className="z-20 mt-8 uppercase tracking-[15px] ">
+        <h2 className="z-20 mt-8 hidden uppercase tracking-[15px] dark:block">
           <Glitch />
+        </h2>
+        <h2 className="z-20 mt-8 w-[252px] uppercase tracking-[15px] dark:hidden ">
+          REACT DEVELOPER
         </h2>
 
         <div className="z-20">
           <div className="">
             <div className="mb-8">
-              <div className="mt-1 h-[2px] bg-gray-300/30"></div>
-              <div className="xbg-[#33ff00]/30 mt-1 h-[2px] bg-gray-300/30"></div>
+              <div className="mt-1 h-[2px] bg-gray-400 dark:bg-gray-300/30"></div>
+              <div className="mt-1 h-[2px] bg-gray-400 dark:bg-gray-300/30"></div>
             </div>
             <Link href="#about">
               <button className="heroButton z-50">About</button>
