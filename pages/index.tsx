@@ -10,9 +10,10 @@ import About from '../components/About'
 import { PageInfo, DbProjects, DbSkills, Social } from '../typings'
 import fetchAll from '../lib/fetchAll'
 import { useRouter } from 'next/router'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import DisplayProjectDetails from '../components/DisplayProjectDetails'
 import 'highlight.js/styles/github-dark.css'
+import CloseModal from '../components/CloseModal'
 
 type Props = {
   pageInfo: PageInfo
@@ -48,15 +49,15 @@ const Home = ({ pageInfo, projects, skills, socials }: Props) => {
     (project: DbProjects) => project._id === router.query.id
   )
 
-  useEffect(() => {
-    console.log(router.query.id)
-  }, [router])
+  const [modal, setModal] = useState(false)
 
   return (
     <>
-      {!!router.query.id && (
-        <div className="absolute top-0 left-0 z-50 h-screen w-screen border-8 border-green-500/40 bg-[#242424]/90">
-          <div className="h-full w-full overflow-auto ">
+      {!!router.query.id && modal && (
+        <div className="absolute top-0 left-0 z-30 h-screen w-screen border-8 border-green-500/40 bg-[#242424]/20">
+          <div className="h-full w-full overflow-auto">
+            <CloseModal setModal={setModal} />
+
             <DisplayProjectDetails project={project as DbProjects} />
           </div>
         </div>
@@ -70,7 +71,7 @@ const Home = ({ pageInfo, projects, skills, socials }: Props) => {
           <title>AD Portfolio</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <Header />
+        {modal ? null : <Header />}
 
         <section id="hero" className="snap-center">
           <Hero pageInfo={pageInfo} />
@@ -85,7 +86,7 @@ const Home = ({ pageInfo, projects, skills, socials }: Props) => {
         </section>
 
         <section id="projects" className="snap-start">
-          <Projects projects={projects} />
+          <Projects projects={projects} setModal={setModal} />
         </section>
 
         <section id="contact" className="snap-start">

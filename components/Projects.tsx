@@ -18,10 +18,11 @@ import { urlFor } from '../lib/sanity'
 
 type Props = {
   projects: DbProjects[]
+  setModal: (modal: boolean) => void
 }
 
-const Projects = ({ projects }: Props) => {
-  console.log(projects)
+const Projects = ({ projects, setModal }: Props) => {
+  // console.log(projects)
   return (
     <motion.div
       initial={{
@@ -71,7 +72,11 @@ const Projects = ({ projects }: Props) => {
                       href={`/?id=${project._id}`}
                       as={`/project/${project._id}`}
                     >
-                      <a>
+                      <a
+                        onClick={() => {
+                          setModal(true)
+                        }}
+                      >
                         <Laptop laptopDisplay={urlFor(project.image).url()} />
                       </a>
                     </Link>
@@ -93,7 +98,12 @@ const Projects = ({ projects }: Props) => {
                         href={`/?id=${project._id}`}
                         as={`/project/${project._id}`}
                       >
-                        <a className="underline decoration-green-600 hover:animate-pulse">
+                        <a
+                          onClick={() => {
+                            setModal(true)
+                          }}
+                          className="underline decoration-green-600 hover:animate-pulse"
+                        >
                           {project.title}
                         </a>
                       </Link>
@@ -105,7 +115,12 @@ const Projects = ({ projects }: Props) => {
                         href={`/?id=${project._id}`}
                         as={`/project/${project._id}`}
                       >
-                        <a className="text-green-600 hover:animate-pulse">
+                        <a
+                          onClick={() => {
+                            setModal(true)
+                          }}
+                          className="text-green-600 hover:animate-pulse"
+                        >
                           Read more...
                         </a>
                       </Link>

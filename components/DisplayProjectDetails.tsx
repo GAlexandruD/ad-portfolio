@@ -18,7 +18,7 @@ type Props = {
 
 const DisplayProjectDetails = ({ project }: Props) => {
   return (
-    <div className="mx-auto flex max-w-5xl flex-col items-center justify-center space-y-5 bg-gray-200/80 dark:bg-[#242424]/90">
+    <div className="z-50 mx-auto flex max-w-5xl flex-col items-center justify-center space-y-5 bg-gray-200/80 dark:bg-[#242424]/90">
       <h4 className="py-4 text-center tracking-widest">
         Details for:{' '}
         <span className="text-lg font-bold text-green-600 dark:text-green-500">
