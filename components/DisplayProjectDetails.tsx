@@ -10,6 +10,7 @@ import { DbProjects } from '../typings'
 import Logo from './Logo'
 import { SiGithub } from 'react-icons/si'
 import { FiExternalLink } from 'react-icons/fi'
+import { TiArrowBack } from 'react-icons/ti'
 
 type Props = {
   // id: string
@@ -18,7 +19,15 @@ type Props = {
 
 const DisplayProjectDetails = ({ project }: Props) => {
   return (
-    <div className="z-50 mx-auto flex max-w-5xl flex-col items-center justify-center space-y-5 bg-gray-200/80 dark:bg-[#242424]/90">
+    <div className="z-50 mx-auto flex max-w-5xl flex-col items-center justify-center space-y-5 bg-gray-200 dark:bg-[#242424]">
+      <div className="my-8">
+        <Link href="/#projects">
+          <a className="flex items-center justify-center text-3xl text-gray-400">
+            <TiArrowBack className="mr-2 h-10 w-10" />
+            <span className="">Back to Projects</span>
+          </a>
+        </Link>
+      </div>
       <h4 className="py-4 text-center tracking-widest">
         Details for:{' '}
         <span className="text-lg font-bold text-green-600 dark:text-green-500">
@@ -84,6 +93,14 @@ const DisplayProjectDetails = ({ project }: Props) => {
             />
           )
         })}
+      </div>
+      <div className="py-8">
+        <Link href="/#projects">
+          <a className="flex items-center justify-center text-3xl text-gray-400">
+            <TiArrowBack className="mr-2 h-10 w-10" />
+            <span className="">Back to Projects</span>
+          </a>
+        </Link>
       </div>
     </div>
   )

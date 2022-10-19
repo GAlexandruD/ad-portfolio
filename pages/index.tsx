@@ -54,7 +54,7 @@ const Home = ({ pageInfo, projects, skills, socials }: Props) => {
   return (
     <>
       {!!router.query.id && modal && (
-        <div className="absolute top-0 left-0 z-30 h-screen w-screen border-8 border-green-500/40 bg-[#242424]/20">
+        <div className="absolute top-0 left-0 z-30 h-screen w-screen bg-gray-200 dark:bg-[#242424]">
           <div className="h-full w-full overflow-auto">
             <CloseModal setModal={setModal} />
 
@@ -71,7 +71,7 @@ const Home = ({ pageInfo, projects, skills, socials }: Props) => {
           <title>AD Portfolio</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        {modal ? null : <Header />}
+        {modal ? null : <Header socials={socials} />}
 
         <section id="hero" className="snap-center">
           <Hero pageInfo={pageInfo} />

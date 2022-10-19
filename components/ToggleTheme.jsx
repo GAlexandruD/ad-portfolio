@@ -23,9 +23,9 @@ const ToggleTheme = () => {
       className="cursor-pointer text-lg hover:text-green-800 "
     >
       {theme === 'dark' ? (
-        <FaMoon className="h-6 w-6" />
+        <FaMoon className="h-6 w-6 text-[#808080]" />
       ) : (
-        <FaSun className="h-6 w-6" />
+        <FaSun className="h-6 w-6 text-[#808080]" />
       )}
     </button>
   )

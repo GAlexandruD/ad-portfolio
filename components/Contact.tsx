@@ -63,12 +63,14 @@ const ContactMe = ({ pageInfo }: Props) => {
               placeholder="Name"
               className="contactInput"
               type="text"
+              autoComplete="off"
             />
             <input
               {...register('email')}
               placeholder="Email"
               className="contactInput"
               type="email"
+              autoComplete="off"
             />
           </div>
           <input
@@ -76,12 +78,14 @@ const ContactMe = ({ pageInfo }: Props) => {
             placeholder="Subject"
             className="contactInput"
             type="text"
+            autoComplete="off"
           />
 
           <textarea
             {...register('message')}
             placeholder="Message"
             className="contactInput"
+            autoComplete="off"
           />
           <button
             type="submit"

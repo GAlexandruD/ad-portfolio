@@ -2,16 +2,18 @@ import { SiGithub, SiLinkedin } from 'react-icons/si'
 import { BiEnvelope } from 'react-icons/bi'
 import { MdContactMail } from 'react-icons/md'
 import { WindupChildren, Pace } from 'windups'
-import { AiOutlineClose } from 'react-icons/ai'
-import { IoClose } from 'react-icons/io5'
 import { CgClose } from 'react-icons/cg'
 import { motion } from 'framer-motion'
 import ToggleTheme from './ToggleTheme'
 import { useState } from 'react'
+import { SocialIcon } from 'react-social-icons'
+import { Social } from '../typings'
 
-type Props = {}
+type Props = {
+  socials: Social[]
+}
 
-const Header = (props: Props) => {
+const Header = ({ socials }: Props) => {
   const [open, setOpen] = useState(false)
 
   return (
@@ -35,17 +37,17 @@ const Header = (props: Props) => {
         >
           {/* Social icons */}
 
-          <a href="https://github.com/GAlexandruD" target="_blank" className="">
-            <SiGithub className="h-6 w-6 cursor-pointer hover:text-green-800" />
-          </a>
-
-          <a
-            href="https://www.linkedin.com/in/dragos-ghiugan-96492938/"
-            target="_blank"
-            className=""
-          >
-            <SiLinkedin className="ml-4 h-6 w-6 cursor-pointer hover:text-green-800" />
-          </a>
+          {socials &&
+            socials.map((social, idx) => (
+              <SocialIcon
+                key={idx}
+                url={social.url}
+                className=""
+                target="_blank"
+                fgColor="gray"
+                bgColor="transparent"
+              />
+            ))}
         </motion.div>
 
         <motion.div
@@ -65,11 +67,8 @@ const Header = (props: Props) => {
           className="flex cursor-pointer flex-row items-center"
         >
           <ToggleTheme />
-          <a
-            href="#contact"
-            className="flex flex-row items-center hover:text-green-800"
-          >
-            <BiEnvelope className="ml-2 h-8 w-8" />
+          <a href="#contact" className="flex flex-row items-center">
+            <BiEnvelope className="ml-4 h-8 w-8 md:ml-6" />
             <p className="ml-2 hidden text-sm uppercase lg:inline-flex">
               Get in touch
             </p>
@@ -80,46 +79,60 @@ const Header = (props: Props) => {
       {/* Mobile menu */}
       <header
         style={{ backgroundColor: `${open ? '#242424' : 'transparent'}` }}
-        className="absolute top-0 right-4 z-50 flex flex-col items-center justify-center p-4 text-gray-500 sm:hidden"
+        className="absolute top-0 right-4 z-50 flex flex-col items-center justify-center p-4 sm:hidden"
       >
         {open ? (
           <CgClose
-            className="h-6 w-6 cursor-pointer hover:text-green-800"
+            className="mb-1 h-6 w-6 cursor-pointer text-[#808080]"
             onClick={() => setOpen(!open)}
           />
         ) : (
           <MdContactMail
-            className="h-6 w-6 cursor-pointer hover:text-green-800"
+            className="h-6 w-6 cursor-pointer text-[#535353]"
             onClick={() => setOpen(!open)}
           />
         )}
         {open && (
           <ul className="flex flex-col items-center">
-            <li className="mt-4">
-              <a
+            <li className="">
+              <SocialIcon
+                url="https://github.com/GAlexandruD"
+                className=""
+                target="_blank"
+                fgColor="gray"
+                bgColor="transparent"
+              />
+              {/* <a
                 href="https://github.com/GAlexandruD"
                 target="_blank"
                 className=""
               >
                 <SiGithub className="h-6 w-6 cursor-pointer hover:text-green-800" />
-              </a>
+              </a> */}
             </li>
 
-            <li className="mt-4">
-              <a
+            <li className="">
+              <SocialIcon
+                url="https://www.linkedin.com/in/dragos-alexandru"
+                className=""
+                target="_blank"
+                fgColor="gray"
+                bgColor="transparent"
+              />
+              {/* <a
                 href="https://www.linkedin.com/in/dragos-ghiugan-96492938/"
                 target="_blank"
                 className=""
               >
                 <SiLinkedin className="h-6 w-6 cursor-pointer hover:text-green-800" />
-              </a>
+              </a> */}
             </li>
-            <li className="mt-4">
+            <li className="">
               <a
                 href="#contact"
                 className="flex flex-row items-center justify-center hover:text-green-800"
               >
-                <BiEnvelope className="h-7 w-7" />
+                <BiEnvelope className="h-7 w-7 text-[#808080]" />
               </a>
             </li>
             <li className="mt-4">

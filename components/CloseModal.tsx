@@ -7,13 +7,13 @@ type Props = {
 const CloseModal = ({ setModal }: Props) => {
   const router = useRouter()
   return (
-    <div className="absolute top-4 right-6 z-50 rounded-full bg-black/50">
+    <div className="absolute top-4 right-4 z-50 rounded-full bg-black/50 sm:right-8">
       <AiOutlineCloseCircle
         onClick={() => {
           setModal(false)
           router.replace('/#projects')
         }}
-        className="h-8 w-8 text-gray-200 hover:text-green-600 xl:h-20 xl:w-20"
+        className="h-10 w-10 cursor-pointer text-gray-200 hover:text-green-600 dark:text-gray-400 md:h-12 md:w-12 xl:h-14 xl:w-14"
       />
     </div>
   )
