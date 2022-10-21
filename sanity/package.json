@@ -27,6 +27,7 @@
     "glob-parent": "^6.0.2",
     "jsdom": "^20.0.1",
     "mem": "^9.0.2",
+    "minimatch": "^5.1.0",
     "nth-check": "^2.1.1",
     "postcss": "^8.4.18",
     "prop-types": "^15.7",
