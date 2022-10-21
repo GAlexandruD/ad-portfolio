@@ -13,7 +13,7 @@ const CloseModal = ({ setModal }: Props) => {
           setModal(false)
           router.replace('/#projects')
         }}
-        className="h-10 w-10 cursor-pointer text-gray-200 hover:text-green-600 dark:text-gray-400 md:h-12 md:w-12 xl:h-14 xl:w-14"
+        className="h-10 w-10 cursor-pointer text-gray-200 transition-all hover:scale-110 hover:text-green-600 dark:text-gray-400 md:h-12 md:w-12 xl:h-14 xl:w-14"
       />
     </div>
   )

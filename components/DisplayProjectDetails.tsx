@@ -19,7 +19,7 @@ type Props = {
 
 const DisplayProjectDetails = ({ project }: Props) => {
   return (
-    <div className="z-50 mx-auto flex max-w-5xl flex-col items-center justify-center space-y-5 bg-gray-200 dark:bg-[#242424]">
+    <div className="z-50 mx-auto flex max-w-[1120px] flex-col items-center justify-center space-y-5 bg-gray-200 dark:bg-[#242424]">
       <div className="my-8">
         <Link href="/#projects">
           <a className="flex items-center justify-center text-3xl text-gray-400">
@@ -35,13 +35,16 @@ const DisplayProjectDetails = ({ project }: Props) => {
         </span>
       </h4>
       <div className="w-[280px] sm:w-[400px] md:w-[500px] lg:w-[600px] xl:w-[700px]">
-        <Image
-          src={urlFor(project.image).url()}
-          layout="responsive"
-          objectFit="cover"
-          width={5000}
-          height={5000}
-        />
+        <div className="border-2">
+          <Image
+            src={urlFor(project.image).url()}
+            layout="responsive"
+            objectFit="cover"
+            width={640}
+            height={400}
+            className=""
+          />
+        </div>
         <div className="flex flex-col space-y-4 pt-4 text-center">
           <p className="text-gray-500">
             Updated: {project.updated_at.split('T')[0]}

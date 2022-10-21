@@ -23,7 +23,7 @@ const Hero = ({ pageInfo }: Props) => {
         <BackgroundCircles />
       </div>
 
-      <div className="flex h-screen max-h-[1000px] min-h-screen w-screen flex-col items-center justify-center space-y-10">
+      <div className="flex h-screen max-h-[1000px] min-h-screen w-screen flex-col items-center justify-center xl:space-y-10">
         {/* <h1 className=" mb-10 font-[courier] text-lg font-bold uppercase tracking-[6px] text-gray-400 opacity-60">
           Alexandru Dragos
         </h1> */}

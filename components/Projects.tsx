@@ -34,13 +34,13 @@ const Projects = ({ projects, setModal }: Props) => {
       transition={{
         duration: 1.5,
       }}
-      className="relative z-0 mx-auto flex h-screen max-w-full flex-col items-center justify-evenly overflow-hidden text-left md:flex-row"
+      className="mx-auto flex h-screen min-h-fit max-w-full flex-col items-center justify-evenly text-left"
     >
-      <h3 className="top-24 mt-4 uppercase tracking-[20px] text-gray-500 sm:absolute sm:top-10 sm:text-2xl">
+      <h3 className="mt-4 uppercase tracking-[20px] text-gray-500 sm:text-2xl">
         Projects
       </h3>
 
-      <div className="relative z-20 flex w-full snap-x snap-mandatory items-center overflow-x-auto overflow-y-hidden">
+      <div className="relative flex h-screen w-full snap-x snap-mandatory items-center overflow-x-auto overflow-y-hidden">
         <Swiper
           rewind={true}
           navigation={true}
@@ -50,7 +50,7 @@ const Projects = ({ projects, setModal }: Props) => {
           {projects &&
             projects.map((project, idx) => (
               <SwiperSlide key={idx}>
-                <div className="flex h-screen w-screen snap-center flex-col items-center justify-center overflow-hidden sm:space-y-10 sm:p-20">
+                <div className="flex h-screen w-screen snap-center flex-col items-center justify-center overflow-hidden sm:px-20 xl:space-y-10">
                   <motion.div
                     initial={{
                       y: -100,
@@ -130,9 +130,8 @@ const Projects = ({ projects, setModal }: Props) => {
               </SwiperSlide>
             ))}
         </Swiper>
+        <div className="absolute top-[25%] left-0 h-[50vh] w-full -skew-y-12 bg-green-500/10"></div>
       </div>
-
-      <div className="absolute top-[25%] left-0 h-[500px] w-full -skew-y-12 bg-green-500/10"></div>
     </motion.div>
   )
 }

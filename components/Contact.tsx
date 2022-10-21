@@ -26,8 +26,8 @@ const ContactMe = ({ pageInfo }: Props) => {
   }
 
   return (
-    <div className="relative mx-auto flex h-screen max-w-7xl flex-col items-center justify-center text-center sm:px-10 sm:pb-20 md:text-left">
-      <h3 className="mt-4 text-center uppercase tracking-[20px] text-gray-500 sm:absolute sm:top-10 sm:text-2xl ">
+    <div className="mx-auto flex h-screen min-h-fit max-w-7xl flex-col items-center justify-center overflow-hidden text-center sm:pb-40 md:text-left">
+      <h3 className="mt-4 text-center uppercase tracking-[20px] text-gray-500 sm:text-2xl ">
         Contact
       </h3>
 
