@@ -23,6 +23,7 @@ html {
 .markdown code.hljs {
   /* white-space: pre-wrap; */
   /* background-color: aquamarine; */
-  width: 100%;
+  /* width: 100%; */
   /* max-width: 300px; */
+  /* overflow-x: auto; */
 }

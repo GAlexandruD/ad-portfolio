@@ -17,6 +17,14 @@ export default {
       },
     },
     {
+      name: 'animatedImage',
+      title: 'AnimatedImage',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
+    {
       name: 'summary',
       title: 'Summary',
       type: 'text',

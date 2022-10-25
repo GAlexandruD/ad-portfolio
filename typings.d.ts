@@ -36,6 +36,7 @@ export interface DbProjects extends SanityBody {
   _type: 'projects'
   title: string
   image: Image
+  animatedImage: Image
   summary: text
   description: text
   githubUrl: string

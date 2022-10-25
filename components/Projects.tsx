@@ -77,7 +77,9 @@ const Projects = ({ projects, setModal }: Props) => {
                           setModal(true)
                         }}
                       >
-                        <Laptop laptopDisplay={urlFor(project.image).url()} />
+                        <Laptop
+                          laptopDisplay={urlFor(project.animatedImage).url()}
+                        />
                       </a>
                     </Link>
                     <p className="text-center">

@@ -11,7 +11,7 @@ type Props = {
 
 const Logo = (props: Props) => {
   return (
-    <div className="mr-4 flex flex-col items-center justify-center p-4">
+    <div className="mr-4 flex h-full w-full flex-col items-center justify-center p-4">
       <motion.div
         initial={{
           opacity: 0.2,
