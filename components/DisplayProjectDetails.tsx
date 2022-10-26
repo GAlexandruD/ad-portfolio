@@ -99,7 +99,9 @@ const DisplayProjectDetails = ({ project }: Props) => {
         <p className="w-full pb-2 pt-2 text-left tracking-widest text-green-600 dark:text-green-500">
           Summary:
         </p>
-        <p className="w-full pl-2 pb-2">{project.summary}</p>
+        <p className="w-full pb-2 text-[#334155] dark:text-[#cbd5e1]">
+          {project.summary}
+        </p>
         <p className="w-full pt-8 pb-2 text-left tracking-widest text-green-600 dark:text-green-500">
           Description:
         </p>
