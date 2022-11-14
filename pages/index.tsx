@@ -86,7 +86,7 @@ const Home = ({ pageInfo, projects, skills, socials }: Props) => {
         </section>
 
         <section id="projects" className="snap-start">
-          <Projects projects={projects} setModal={setModal} />
+          <Projects projects={projects} setModal={setModal} modal={modal} />
         </section>
 
         <section id="contact" className="snap-start">

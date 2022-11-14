@@ -19,9 +19,10 @@ import { urlFor } from '../lib/sanity'
 type Props = {
   projects: DbProjects[]
   setModal: (modal: boolean) => void
+  modal: boolean
 }
 
-const Projects = ({ projects, setModal }: Props) => {
+const Projects = ({ projects, setModal, modal }: Props) => {
   // console.log(projects)
   return (
     <motion.div
@@ -78,7 +79,11 @@ const Projects = ({ projects, setModal }: Props) => {
                         }}
                       >
                         <Laptop
-                          laptopDisplay={urlFor(project.animatedImage).url()}
+                          laptopDisplay={
+                            !modal
+                              ? urlFor(project.animatedImage).url()
+                              : urlFor(project.image).url()
+                          }
                         />
                       </a>
                     </Link>
