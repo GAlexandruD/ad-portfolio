@@ -15,7 +15,7 @@ const About = ({ pageInfo }: Props) => {
       </h3>
       <div className="flex flex-1 flex-col items-center justify-center md:flex-row md:text-left">
         <motion.img
-          className="h-36 w-36 rounded-full object-cover brightness-90  hover:grayscale-[40%] dark:grayscale-[50%] dark:hover:brightness-75  sm:h-56 sm:w-56 md:h-96 md:w-64 md:rounded-lg xl:h-[500px] xl:w-[400px]"
+          className="h-36 w-36 rounded-full object-cover brightness-90 dark:grayscale-[50%] sm:h-56 sm:w-56 md:h-96 md:w-64 md:rounded-lg xl:h-[500px] xl:w-[400px]"
           initial={{
             x: -200,
             opacity: 0,
