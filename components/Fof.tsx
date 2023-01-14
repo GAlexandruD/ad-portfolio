@@ -15,8 +15,9 @@ const Fof = ({}: Props) => {
   return (
     <div className="flex-1">
       <section className={styles.outside}>
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center bg-black/80">
           <div className={styles.glitch}>404 Error</div>
+
           <div className={styles.pnf}>Page not found</div>
         </div>
       </section>

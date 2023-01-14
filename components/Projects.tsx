@@ -1,7 +1,7 @@
 import Project from './Project'
 // import projects from '../lib/projects.json'
 import { motion } from 'framer-motion'
-
+import TimeAgo from 'react-timeago'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 // Import Swiper styles
@@ -51,7 +51,7 @@ const Projects = ({ projects, setModal, modal }: Props) => {
           {projects &&
             projects.map((project, idx) => (
               <SwiperSlide key={idx}>
-                <div className="flex h-screen w-screen snap-center flex-col items-center justify-center overflow-hidden sm:px-20 xl:space-y-10">
+                <div className="xmx-auto flex h-screen w-screen snap-center flex-col items-center justify-center overflow-hidden sm:px-20 xl:space-y-10">
                   <motion.div
                     initial={{
                       y: -100,
@@ -88,7 +88,10 @@ const Projects = ({ projects, setModal, modal }: Props) => {
                       </a>
                     </Link>
                     <p className="text-center">
-                      Updated: {project.updated_at.split('T')[0]}
+                      Updated: <TimeAgo date={project.updated_at} />
+                      {/* <span className="text-sm">
+                        ({project.updated_at.split('T')[0]})
+                      </span> */}
                     </p>
                   </motion.div>
 

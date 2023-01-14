@@ -13,6 +13,7 @@ import { FiExternalLink } from 'react-icons/fi'
 import { TiArrowBack } from 'react-icons/ti'
 import { useState } from 'react'
 import { useTheme } from 'next-themes'
+import TimeAgo from 'react-timeago'
 
 type Props = {
   // id: string
@@ -74,7 +75,7 @@ const DisplayProjectDetails = ({ project }: Props) => {
         </div>
         <div className="flex flex-col space-y-4 pt-4 text-center">
           <p className="text-gray-500">
-            Updated: {project.updated_at.split('T')[0]}
+            Updated: <TimeAgo date={project.updated_at} />
           </p>
           {project.githubUrl && (
             <div className="flex items-center justify-center space-x-2">

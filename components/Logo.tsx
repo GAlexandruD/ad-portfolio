@@ -30,13 +30,17 @@ const Logo = (props: Props) => {
           objectFit="scale-down"
         />
       </motion.div>
-      <p
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 4 }}
         className={`${
           props.displayText ? '' : 'hidden'
         } cursor-default text-center text-xl hover:text-green-700 dark:hover:text-green-500`}
       >
         {props.name}
-      </p>
+      </motion.p>
     </div>
   )
 }
