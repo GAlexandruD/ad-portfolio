@@ -10,7 +10,7 @@ import About from '../components/About'
 import { PageInfo, DbProjects, DbSkills, Social } from '../typings'
 import fetchAll from '../lib/fetchAll'
 import { useRouter } from 'next/router'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import DisplayProjectDetails from '../components/DisplayProjectDetails'
 import 'highlight.js/styles/github-dark.css'
 import CloseModal from '../components/CloseModal'
@@ -54,7 +54,7 @@ const Home = ({ pageInfo, projects, skills, socials }: Props) => {
   return (
     <>
       {!!router.query.id && modal && (
-        <div className="absolute top-0 left-0 z-30 h-screen w-screen bg-gray-200 dark:bg-[#242424]">
+        <div className="absolute left-0 top-0 z-30 h-screen w-screen bg-gray-200 dark:bg-[#242424]">
           <div className="h-full w-full overflow-auto">
             <CloseModal setModal={setModal} />
 
@@ -65,7 +65,7 @@ const Home = ({ pageInfo, projects, skills, socials }: Props) => {
 
       <div
         className="z-0 h-screen snap-y snap-mandatory
-      overflow-x-hidden overflow-y-scroll bg-gray-200 text-gray-600 dark:bg-[rgb(36,36,36)] dark:text-gray-400"
+      overflow-y-scroll bg-gray-200 text-gray-600 overflow-x-hidden dark:bg-[rgb(36,36,36)] dark:text-gray-400"
       >
         <Head>
           <title>AD Portfolio</title>
@@ -89,9 +89,10 @@ const Home = ({ pageInfo, projects, skills, socials }: Props) => {
           <Projects projects={projects} setModal={setModal} modal={modal} />
         </section>
 
-        <section id="contact" className="snap-start">
+        {/* Disabled due to spam */}
+        {/* <section id="contact" className="snap-start">
           <Contact pageInfo={pageInfo} />
-        </section>
+        </section> */}
 
         <Footer />
       </div>

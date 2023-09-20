@@ -67,19 +67,19 @@ const Header = ({ socials }: Props) => {
           className="flex cursor-pointer flex-row items-center"
         >
           <ToggleTheme />
-          <a href="#contact" className="flex flex-row items-center">
+          {/* <a href="#contact" className="flex flex-row items-center">
             <BiEnvelope className="ml-4 h-8 w-8 md:ml-6" />
             <p className="ml-2 hidden text-sm uppercase lg:inline-flex">
               Get in touch
             </p>
-          </a>
+          </a> */}
         </motion.div>
       </header>
 
       {/* Mobile menu */}
       <header
         style={{ backgroundColor: `${open ? '#242424' : 'transparent'}` }}
-        className="absolute top-0 right-4 z-50 flex flex-col items-center justify-center p-4 sm:hidden"
+        className="absolute right-4 top-0 z-50 flex flex-col items-center justify-center p-4 sm:hidden"
       >
         {open ? (
           <CgClose

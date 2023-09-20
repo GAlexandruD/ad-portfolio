@@ -57,7 +57,7 @@ const ContactMe = ({ pageInfo }: Props) => {
           onSubmit={handleSubmit(onSubmit)}
           className="mx-auto flex w-fit flex-col space-y-2"
         >
-          <div className="flex flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-2">
+          <div className="flex flex-col space-y-2 sm:flex-row sm:space-x-2 sm:space-y-0">
             <input
               {...register('name')}
               placeholder="Name"
@@ -89,7 +89,7 @@ const ContactMe = ({ pageInfo }: Props) => {
           />
           <button
             type="submit"
-            className="z-50 rounded-md bg-green-600 py-5 px-10 text-lg font-bold text-black hover:bg-green-700"
+            className="z-50 rounded-md bg-green-600 px-10 py-5 text-lg font-bold text-black hover:bg-green-700"
           >
             Submit
           </button>
